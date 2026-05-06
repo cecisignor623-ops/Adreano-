@@ -69,7 +69,12 @@ export async function processPurchase({ parsed, env, context }) {
   // never blocks the others.
   const handlerPromises = [];
 
-  if (parsed.trk && checkoutData.trk) {
+  // Tracking fires whenever we have an email — match quality is best when
+  // checkoutData was recovered (fbp/fbc/UTMs/IP/UA), but for platforms that
+  // don't reliably round-trip a `trk` (e.g. Sympla), email-only Purchase
+  // still optimizes Meta Ads campaigns. handleTracking degrades gracefully
+  // on missing checkoutData fields — they fall back to ''.
+  if (parsed.email) {
     handlerPromises.push(
       handleTracking({ parsed: enriched, eventId, eventTime, env })
         .then(r => ({ handler: 'tracking', ...r }))
