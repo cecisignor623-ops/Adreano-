@@ -7,6 +7,42 @@
 
 ---
 
+## 🎨 Mapa visual × copy (12 templates disponíveis)
+
+A pasta tem 2 famílias de criativos:
+
+**Família A — Sofisticados (preto/dourado, alta percepção de marca):**
+- `feed-01-quote.png` — Quote elegante
+- `feed-02-photo.png` — Foto + overlay dourado
+- `feed-03-revelation.png` — Frase de impacto centralizada
+- `feed-04-checklist.png` — 5 dores em formato lista
+- `feed-05-question.png` — Pergunta gigante
+
+**Família B — Direct response (amarelo/preto, mais nativo, alta CTR):**
+- `feed-06-highlight.png` — Foto + "padrão familiar" em highlight amarelo
+- `feed-07-numbered.png` — Amarelo dominante + 3 sinais numerados
+- `feed-08-split.png` — Antes/Depois split visual
+- `feed-09-closeup.png` — Close-up Adreano + pergunta gigante + amarelo
+- `feed-10-quote-card.png` — Quote-card viral compartilhável
+
+**Stories:**
+- `story-01-photo.png` — Foto vertical
+- `story-02-question.png` — Pergunta hook vertical
+
+### Recomendação de pareamento (copy × visual):
+
+| Copy | Visual recomendado | Visual alternativo |
+|---|---|---|
+| **Copy 1** (Padrão / curiosidade) | feed-06-highlight | feed-01-quote |
+| **Copy 2** (Revelação / filosófico) | feed-10-quote-card | feed-03-revelation |
+| **Copy 3** (Checklist) | feed-07-numbered | feed-04-checklist |
+| **Copy 4** (Pergunta direta) | feed-09-closeup | feed-05-question |
+| **Copy 5** (Honesto / anti-promessa) | feed-08-split | feed-02-photo |
+
+---
+
+---
+
 ## ⚙️ Configuração comum a todos
 
 - **CTA Button:** `Saiba mais` (recomendado) ou `Comprar agora`

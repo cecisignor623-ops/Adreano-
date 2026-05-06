@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Feed 10 — Quote-Card Reflection (1080x1080)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#222;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:20px;font-family:'Inter',sans-serif}
+  .ad{
+    width:1080px;height:1080px;
+    position:relative;overflow:hidden;
+    background:#fafaf9;
+    padding:80px;
+    display:flex;flex-direction:column;justify-content:center;align-items:center;
+  }
+  .ad::before{
+    content:"";position:absolute;top:60px;right:60px;
+    width:200px;height:200px;
+    background:#fef08a;border-radius:50%;
+    filter:blur(70px);opacity:0.7;
+  }
+  .ad::after{
+    content:"";position:absolute;bottom:60px;left:60px;
+    width:160px;height:160px;
+    background:#fed7aa;border-radius:50%;
+    filter:blur(60px);opacity:0.6;
+  }
+  .top-mark{
+    position:relative;z-index:2;
+    font-size:200px;line-height:0.4;color:#0e0c09;font-weight:900;
+    margin-bottom:20px;
+  }
+  .quote{
+    position:relative;z-index:2;
+    font-size:64px;line-height:1.18;font-weight:800;color:#0e0c09;
+    text-align:center;letter-spacing:-0.025em;
+    max-width:880px;margin-bottom:50px;
+  }
+  .quote .em{
+    background:linear-gradient(180deg,transparent 60%,#fde047 60%);
+    padding:0 4px;
+  }
+  .ornament{
+    position:relative;z-index:2;
+    width:80px;height:3px;background:#0e0c09;border-radius:99px;
+    margin-bottom:30px;
+  }
+  .source-photo{
+    position:relative;z-index:2;
+    width:80px;height:80px;border-radius:50%;
+    background-image:url('adreano.jpg');
+    background-size:280%;background-position:48% 24%;
+    border:4px solid #0e0c09;
+    margin-bottom:20px;
+  }
+  .source-name{
+    position:relative;z-index:2;
+    font-size:24px;font-weight:800;color:#0e0c09;letter-spacing:-0.01em;
+    margin-bottom:6px;
+  }
+  .source-role{
+    position:relative;z-index:2;
+    font-size:16px;font-weight:600;color:#737373;letter-spacing:0.04em;text-transform:uppercase;
+  }
+  .footer{
+    position:absolute;bottom:0;left:0;right:0;
+    background:#0e0c09;color:#fafaf9;
+    padding:24px 50px;
+    display:flex;align-items:center;justify-content:space-between;
+    z-index:3;
+    border-top:5px solid #fde047;
+  }
+  .event-name{
+    font-size:24px;font-weight:900;color:#fde047;
+  }
+  .event-info{
+    font-size:18px;font-weight:600;color:#fef3c7;letter-spacing:0.05em;text-transform:uppercase;
+  }
+  .event-info strong{color:#ffffff;font-weight:900}
+</style>
+</head>
+<body>
+<div class="ad">
+  <div class="top-mark">"</div>
+  <div class="quote">
+    Você não começou essa <span class="em">história</span>.<br/>
+    Mas pode ser quem <span class="em">encerra</span> ela.
+  </div>
+  <div class="ornament"></div>
+  <div class="source-photo"></div>
+  <div class="source-name">Adreano Vitor de Lima</div>
+  <div class="source-role">Especialista em Padrões Familiares</div>
+
+  <div class="footer">
+    <div class="event-name">Heranças Invisíveis</div>
+    <div class="event-info"><strong>20/05</strong> · Maringá · 45 vagas</div>
+  </div>
+</div>
+</body>
+</html>

@@ -6,11 +6,19 @@ const fs = require('fs');
 const path = require('path');
 
 const TEMPLATES = [
+  // Sofisticados (preto/dourado, alta percepção de marca)
   { html: 'feed-01-quote.html',     out: 'feed-01-quote.png',     w: 1080, h: 1080 },
   { html: 'feed-02-photo.html',     out: 'feed-02-photo.png',     w: 1080, h: 1080 },
   { html: 'feed-03-revelation.html',out: 'feed-03-revelation.png',w: 1080, h: 1080 },
   { html: 'feed-04-checklist.html', out: 'feed-04-checklist.png', w: 1080, h: 1080 },
   { html: 'feed-05-question.html',  out: 'feed-05-question.png',  w: 1080, h: 1080 },
+  // Direct response (look mais nativo, alta conversão)
+  { html: 'feed-06-highlight.html', out: 'feed-06-highlight.png', w: 1080, h: 1080 },
+  { html: 'feed-07-numbered.html',  out: 'feed-07-numbered.png',  w: 1080, h: 1080 },
+  { html: 'feed-08-split.html',     out: 'feed-08-split.png',     w: 1080, h: 1080 },
+  { html: 'feed-09-closeup.html',   out: 'feed-09-closeup.png',   w: 1080, h: 1080 },
+  { html: 'feed-10-quote-card.html',out: 'feed-10-quote-card.png',w: 1080, h: 1080 },
+  // Stories
   { html: 'story-01-photo.html',    out: 'story-01-photo.png',    w: 1080, h: 1920 },
   { html: 'story-02-question.html', out: 'story-02-question.png', w: 1080, h: 1920 },
 ];

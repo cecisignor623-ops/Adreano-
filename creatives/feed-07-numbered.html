@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Feed 07 — Numbered List Instagram-native (1080x1080)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#222;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:20px;font-family:'Inter',sans-serif}
+  .ad{
+    width:1080px;height:1080px;
+    position:relative;overflow:hidden;
+    background:linear-gradient(135deg,#fef3c7 0%,#fde047 100%);
+    padding:70px 70px;display:flex;flex-direction:column;
+  }
+  .ad::before{
+    content:"";position:absolute;top:-30px;left:-30px;right:-30px;bottom:-30px;
+    background-image:radial-gradient(circle at 1px 1px,rgba(0,0,0,0.04) 1px,transparent 0);
+    background-size:30px 30px;pointer-events:none;
+  }
+  .header{
+    position:relative;z-index:2;
+    background:#0e0c09;color:#fde047;
+    padding:18px 32px;border-radius:999px;
+    align-self:flex-start;
+    font-size:22px;font-weight:800;letter-spacing:0.04em;
+    margin-bottom:32px;
+  }
+  h1{
+    position:relative;z-index:2;
+    font-size:96px;line-height:0.98;font-weight:900;color:#0e0c09;
+    letter-spacing:-0.035em;margin-bottom:48px;
+  }
+  h1 .em{display:block;font-style:italic;color:#a16207;font-weight:800;font-size:64px;letter-spacing:-0.02em;margin-top:8px}
+  ul{list-style:none;position:relative;z-index:2;flex:1;display:flex;flex-direction:column;gap:18px}
+  li{
+    background:rgba(14,12,9,0.92);
+    border-radius:18px;padding:22px 28px;
+    color:#fef3c7;font-size:30px;font-weight:600;line-height:1.25;
+    display:flex;align-items:center;gap:24px;
+  }
+  li .num{
+    background:#fde047;color:#0e0c09;
+    width:54px;height:54px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-size:30px;font-weight:900;flex-shrink:0;
+  }
+  .footer{
+    position:relative;z-index:2;
+    margin-top:32px;display:flex;align-items:center;justify-content:space-between;
+    padding:24px 0 0;border-top:3px solid rgba(14,12,9,0.2);
+  }
+  .speaker{
+    font-size:24px;color:#0e0c09;font-weight:700;
+  }
+  .speaker strong{color:#a16207}
+  .info{
+    font-size:20px;color:#0e0c09;font-weight:700;text-align:right;
+  }
+  .info .date{font-size:32px;font-weight:900;display:block;color:#a16207}
+</style>
+</head>
+<body>
+<div class="ad">
+  <div class="header">📍 PRESENCIAL EM MARINGÁ</div>
+  <h1>3 sinais que<br/>você herdou<br/><span class="em">e não sabia</span></h1>
+  <ul>
+    <li><span class="num">1</span>Atrai sempre o mesmo tipo de pessoa errada</li>
+    <li><span class="num">2</span>Ganha dinheiro mas ele "escapa" do nada</li>
+    <li><span class="num">3</span>Sente medo de ser feliz demais</li>
+  </ul>
+  <div class="footer">
+    <div class="speaker">Com <strong>Adreano Vitor</strong></div>
+    <div class="info"><span class="date">20/05</span>45 vagas · 12x R$ 11,04</div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Feed 06 — Photo Dominant + Yellow Highlight (1080x1080)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#222;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:20px;font-family:'Inter',sans-serif}
+  .ad{
+    width:1080px;height:1080px;
+    position:relative;overflow:hidden;
+    background:#0e0c09;
+  }
+  .photo{
+    position:absolute;top:0;left:0;right:0;height:62%;
+    background-image:url('adreano.jpg');
+    background-size:cover;
+    background-position:center 18%;
+    filter:saturate(1.0) contrast(1.05);
+  }
+  .photo::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(0,0,0,0) 60%,rgba(14,12,9,0.95) 100%);
+  }
+  .text-block{
+    position:absolute;bottom:0;left:0;right:0;
+    background:#0e0c09;padding:50px 60px 60px;
+  }
+  h1{
+    font-size:78px;line-height:1.05;font-weight:900;color:#ffffff;
+    letter-spacing:-0.025em;margin-bottom:22px;
+  }
+  .highlight{
+    background:#fde047;
+    color:#0e0c09;font-weight:900;padding:4px 14px;
+    display:inline-block;
+    box-decoration-break:clone;
+    -webkit-box-decoration-break:clone;
+    transform:rotate(-1.5deg);
+    box-shadow:0 6px 20px rgba(253,224,71,0.3);
+  }
+  .sub{
+    font-size:30px;color:#d4d4d4;font-weight:500;line-height:1.35;
+    margin-bottom:28px;
+  }
+  .footer{
+    display:flex;align-items:center;justify-content:space-between;
+    padding-top:22px;border-top:2px solid rgba(255,255,255,0.15);
+  }
+  .footer-info{font-size:22px;color:#fafafa;font-weight:600;letter-spacing:0.01em}
+  .footer-info span{color:#fde047;font-weight:800}
+  .cta-pill{
+    background:#fde047;color:#0e0c09;
+    padding:18px 32px;border-radius:999px;
+    font-size:22px;font-weight:800;letter-spacing:0.02em;text-transform:uppercase;
+    box-shadow:0 8px 30px rgba(253,224,71,0.3);
+  }
+</style>
+</head>
+<body>
+<div class="ad">
+  <div class="photo"></div>
+  <div class="text-block">
+    <h1>Não é você.<br/>É <span class="highlight">padrão familiar</span>.</h1>
+    <div class="sub">Em 1h30, Adreano ensina como interromper a transmissão geracional do que sabota sua vida.</div>
+    <div class="footer">
+      <div class="footer-info">📅 20/05 Maringá · <span>45 vagas</span></div>
+      <div class="cta-pill">Quero a vaga →</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
