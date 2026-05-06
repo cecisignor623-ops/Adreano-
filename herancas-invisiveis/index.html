@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Heranças Invisíveis: descubra e quebre os padrões familiares que estão controlando sua vida, suas relações e seu dinheiro. Evento presencial transformador." />
+<meta name="theme-color" content="#0b0a08" />
+
+<meta property="og:title" content="Heranças Invisíveis — Os Padrões Familiares que Controlam Sua Vida" />
+<meta property="og:description" content="Descubra os padrões invisíveis que você herdou e que sabotam suas relações, sua prosperidade e sua paz. Evento presencial em Maringá-PR." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="assets/images/adreano.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<title>Heranças Invisíveis — Quebre os Padrões Familiares que Controlam Sua Vida</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#0b0a08;
+    --bg-soft:#13110d;
+    --card:#1a1612;
+    --line:rgba(212,175,114,0.18);
+    --gold:#d4af72;
+    --gold-bright:#f0cd92;
+    --gold-dark:#9d7d49;
+    --cream:#f6efe2;
+    --text:#e9e1d0;
+    --muted:#a9a193;
+    --danger:#ff6b6b;
+    --green:#7bc69a;
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.65;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.15;letter-spacing:-0.01em;color:var(--cream);font-weight:600}
+  h1{font-size:clamp(2.2rem,5.5vw,4.4rem)}
+  h2{font-size:clamp(1.9rem,4vw,3.2rem)}
+  h3{font-size:clamp(1.4rem,2.4vw,2rem)}
+  p{color:var(--text);font-size:1.05rem}
+  a{color:inherit;text-decoration:none}
+  .container{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .gold{color:var(--gold-bright)}
+  .underline{position:relative;display:inline-block}
+  .underline::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+  .small{font-size:.92rem;color:var(--muted)}
+
+  /* === TOP BAR === */
+  .topbar{
+    background:linear-gradient(90deg,#1a1410,#2a1f15,#1a1410);
+    border-bottom:1px solid var(--line);
+    text-align:center;padding:10px 16px;
+    font-size:.88rem;color:var(--gold-bright);
+    font-weight:500;letter-spacing:.02em;
+  }
+  .topbar strong{color:var(--cream)}
+
+  /* === HERO === */
+  .hero{
+    position:relative;
+    padding:80px 0 90px;
+    background:
+      radial-gradient(ellipse at 20% 0%,rgba(212,175,114,0.12),transparent 60%),
+      radial-gradient(ellipse at 80% 100%,rgba(212,175,114,0.08),transparent 60%),
+      var(--bg);
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background-image:
+      radial-gradient(circle at 1px 1px,rgba(212,175,114,0.06) 1px,transparent 0);
+    background-size:40px 40px;
+    pointer-events:none;
+  }
+  .hero-inner{position:relative;text-align:center;max-width:920px;margin:0 auto}
+  .pretitle{
+    display:inline-block;padding:8px 20px;border:1px solid var(--line);
+    border-radius:99px;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--gold);margin-bottom:28px;font-weight:500;
+    background:rgba(212,175,114,0.04);
+  }
+  .hero h1{margin-bottom:24px}
+  .hero h1 em{font-style:italic;color:var(--gold-bright);font-weight:500}
+  .hero-sub{font-size:clamp(1.05rem,1.6vw,1.3rem);color:var(--muted);max-width:720px;margin:0 auto 40px;font-weight:300}
+  .hero-cta-wrap{display:flex;flex-direction:column;align-items:center;gap:16px}
+
+  /* CTA BUTTON */
+  .cta{
+    display:inline-block;padding:20px 44px;border-radius:99px;
+    background:linear-gradient(135deg,var(--gold-bright),var(--gold-dark));
+    color:#1a1410;font-weight:700;font-size:1.05rem;
+    letter-spacing:.02em;cursor:pointer;border:none;
+    box-shadow:0 12px 40px rgba(212,175,114,0.25),inset 0 1px 0 rgba(255,255,255,0.3);
+    transition:transform .25s ease,box-shadow .25s ease;
+    position:relative;overflow:hidden;
+    text-transform:uppercase;
+  }
+  .cta:hover{transform:translateY(-3px);box-shadow:0 20px 50px rgba(212,175,114,0.4)}
+  .cta::after{
+    content:"";position:absolute;top:0;left:-100%;width:100%;height:100%;
+    background:linear-gradient(90deg,transparent,rgba(255,255,255,0.4),transparent);
+    transition:left .6s;
+  }
+  .cta:hover::after{left:100%}
+  .cta-mini{font-size:.85rem;color:var(--muted)}
+  .cta-mini span{color:var(--gold-bright)}
+
+  /* === SECTION BASE === */
+  section{padding:90px 0;position:relative}
+  .section-head{text-align:center;max-width:780px;margin:0 auto 60px}
+  .section-head .pretitle{margin-bottom:20px}
+  .section-head h2{margin-bottom:20px}
+  .section-head p{color:var(--muted);font-size:1.1rem}
+
+  /* === PAIN === */
+  .pain{background:linear-gradient(180deg,var(--bg),#0e0c09)}
+  .pain-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:50px}
+  .pain-item{
+    background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:28px;position:relative;transition:transform .3s ease, border-color .3s ease;
+  }
+  .pain-item:hover{transform:translateY(-4px);border-color:rgba(212,175,114,0.4)}
+  .pain-item .icon{
+    width:48px;height:48px;border-radius:12px;
+    background:rgba(212,175,114,0.1);border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:18px;font-size:1.4rem;
+  }
+  .pain-item h3{font-size:1.3rem;margin-bottom:10px;color:var(--cream)}
+  .pain-item p{color:var(--muted);font-size:.98rem}
+
+  /* === REVELATION === */
+  .revelation{
+    background:
+      radial-gradient(ellipse at 50% 0%,rgba(212,175,114,0.1),transparent 60%),
+      var(--bg-soft);
+    text-align:center;
+  }
+  .revelation .quote{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(1.6rem,3.2vw,2.6rem);
+    font-style:italic;color:var(--cream);
+    max-width:880px;margin:0 auto 36px;line-height:1.3;
+  }
+  .revelation .quote::before,.revelation .quote::after{
+    content:'"';color:var(--gold);font-size:3rem;line-height:0;vertical-align:-0.4em;
+  }
+  .revelation .author{color:var(--gold);font-size:.95rem;letter-spacing:.15em;text-transform:uppercase}
+
+  /* === BENEFITS / WHAT YOU GET === */
+  .benefits-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}
+  .benefit{
+    background:linear-gradient(180deg,var(--card),#15110d);
+    border:1px solid var(--line);border-radius:18px;padding:36px 30px;
+    position:relative;transition:all .3s ease;
+  }
+  .benefit:hover{border-color:var(--gold-dark);transform:translateY(-4px)}
+  .benefit .num{
+    position:absolute;top:-18px;left:30px;
+    width:42px;height:42px;border-radius:50%;
+    background:linear-gradient(135deg,var(--gold-bright),var(--gold-dark));
+    color:#1a1410;font-weight:800;display:flex;align-items:center;justify-content:center;
+    font-size:1.05rem;box-shadow:0 6px 20px rgba(212,175,114,0.3);
+  }
+  .benefit h3{font-size:1.4rem;margin-bottom:12px;margin-top:8px}
+  .benefit p{color:var(--muted);font-size:.98rem}
+
+  /* === DIVIDER === */
+  .divider-ornament{display:flex;align-items:center;justify-content:center;gap:20px;margin:80px auto;max-width:400px}
+  .divider-ornament span{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold-dark),transparent)}
+  .divider-ornament svg{color:var(--gold);width:18px;height:18px;flex-shrink:0}
+
+  /* === FOR WHO === */
+  .forwho{background:var(--bg-soft)}
+  .forwho-cols{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:40px}
+  .forwho-card{
+    border-radius:18px;padding:36px 30px;border:1px solid var(--line);
+  }
+  .forwho-card.yes{background:linear-gradient(180deg,rgba(123,198,154,0.04),transparent);border-color:rgba(123,198,154,0.25)}
+  .forwho-card.no{background:linear-gradient(180deg,rgba(255,107,107,0.04),transparent);border-color:rgba(255,107,107,0.25)}
+  .forwho-card h3{margin-bottom:20px;display:flex;align-items:center;gap:10px}
+  .forwho-card.yes h3{color:#a8e0bf}
+  .forwho-card.no h3{color:#ffb0b0}
+  .forwho-card ul{list-style:none}
+  .forwho-card li{padding:10px 0;color:var(--text);display:flex;gap:12px;align-items:flex-start;font-size:1rem;border-bottom:1px solid var(--line)}
+  .forwho-card li:last-child{border-bottom:none}
+  .forwho-card li::before{flex-shrink:0;font-size:1.1rem;line-height:1.4}
+  .forwho-card.yes li::before{content:"✓";color:var(--green);font-weight:800}
+  .forwho-card.no li::before{content:"✕";color:var(--danger);font-weight:800}
+  @media(max-width:780px){.forwho-cols{grid-template-columns:1fr}}
+
+  /* === OFFER === */
+  .offer{background:radial-gradient(ellipse at 50% 50%,rgba(212,175,114,0.08),transparent 70%),var(--bg)}
+  .offer-card{
+    max-width:680px;margin:40px auto 0;
+    background:linear-gradient(180deg,#1c1813,#15110c);
+    border:1px solid var(--gold-dark);border-radius:24px;
+    padding:50px 40px;text-align:center;position:relative;overflow:hidden;
+    box-shadow:0 20px 80px rgba(0,0,0,0.4),inset 0 1px 0 rgba(212,175,114,0.2);
+  }
+  .offer-card::before{
+    content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);
+    width:60%;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  }
+  .offer-badge{
+    display:inline-block;padding:6px 18px;border-radius:99px;
+    background:rgba(255,107,107,0.12);color:#ffb3b3;border:1px solid rgba(255,107,107,0.3);
+    font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;font-weight:600;margin-bottom:20px;
+  }
+  .price-strike{color:var(--muted);text-decoration:line-through;font-size:1.15rem;margin-bottom:6px}
+  .price{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,7vw,5rem);font-weight:600;color:var(--cream);line-height:1}
+  .price small{font-size:1.1rem;color:var(--gold);font-family:'Inter',sans-serif;font-weight:500;display:block;margin-top:6px;letter-spacing:.05em}
+  .price-info{color:var(--muted);margin:20px 0 30px;font-size:.95rem}
+  .price-info strong{color:var(--cream)}
+
+  .stack{margin:30px 0;text-align:left;border-top:1px dashed var(--line);border-bottom:1px dashed var(--line);padding:24px 0}
+  .stack-row{display:flex;justify-content:space-between;padding:8px 0;color:var(--text);font-size:.97rem;border-bottom:1px solid rgba(212,175,114,0.08)}
+  .stack-row:last-child{border-bottom:none;font-weight:700;color:var(--gold-bright);font-size:1.05rem;padding-top:16px;margin-top:8px;border-top:1px solid var(--line)}
+  .stack-row span:last-child{color:var(--gold);font-weight:600}
+
+  /* === COUNTDOWN === */
+  .timer{display:flex;justify-content:center;gap:14px;margin:24px 0}
+  .timer-box{
+    background:rgba(212,175,114,0.08);border:1px solid var(--line);border-radius:12px;
+    padding:14px 18px;min-width:72px;text-align:center;
+  }
+  .timer-num{font-size:1.8rem;font-family:'Cormorant Garamond',serif;color:var(--gold-bright);font-weight:700;line-height:1}
+  .timer-lbl{font-size:.7rem;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-top:4px}
+
+  /* === GUARANTEE === */
+  .guarantee{
+    display:flex;align-items:center;gap:32px;
+    background:linear-gradient(135deg,rgba(123,198,154,0.06),rgba(212,175,114,0.04));
+    border:1px solid rgba(123,198,154,0.2);border-radius:20px;padding:36px;
+    max-width:880px;margin:60px auto 0;
+  }
+  .guarantee-seal{
+    flex-shrink:0;width:120px;height:120px;border-radius:50%;
+    background:radial-gradient(circle,#1f3a2a,#0e1a13);
+    border:2px solid rgba(123,198,154,0.4);
+    display:flex;align-items:center;justify-content:center;
+    color:#a8e0bf;font-family:'Cormorant Garamond',serif;font-style:italic;
+    text-align:center;font-size:.85rem;line-height:1.1;font-weight:600;
+    box-shadow:0 8px 30px rgba(123,198,154,0.15);
+  }
+  .guarantee h3{color:#cbeed8;margin-bottom:8px}
+  .guarantee p{color:var(--muted);font-size:.98rem}
+  @media(max-width:680px){.guarantee{flex-direction:column;text-align:center;padding:30px 24px}}
+
+  /* === TESTIMONIALS === */
+  .testimonials{background:var(--bg-soft)}
+  .testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px}
+  .testi{
+    background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:30px;position:relative;
+  }
+  .testi::before{
+    content:"❝";position:absolute;top:14px;right:22px;
+    font-size:3.5rem;color:var(--gold-dark);opacity:.3;font-family:serif;line-height:1;
+  }
+  .testi p{color:var(--text);font-style:italic;margin-bottom:18px;font-size:1rem;line-height:1.7}
+  .testi-author{display:flex;align-items:center;gap:12px}
+  .testi-avatar{
+    width:44px;height:44px;border-radius:50%;
+    background:linear-gradient(135deg,var(--gold-dark),var(--gold-bright));
+    display:flex;align-items:center;justify-content:center;
+    color:#1a1410;font-weight:700;font-size:1rem;
+  }
+  .testi-name{color:var(--cream);font-weight:600;font-size:.95rem}
+  .testi-role{color:var(--muted);font-size:.82rem}
+  .stars{color:var(--gold-bright);font-size:.95rem;letter-spacing:2px;margin-bottom:12px}
+
+  /* === ABOUT === */
+  .about-block{
+    background:var(--card);border:1px solid var(--line);
+    border-radius:24px;padding:50px;
+    display:grid;grid-template-columns:1fr 1.6fr;gap:40px;align-items:center;
+  }
+  .about-photo{
+    aspect-ratio:4/5;border-radius:20px;
+    background:linear-gradient(135deg,#2a1f15,#1a1410);
+    border:1px solid var(--line);
+    position:relative;overflow:hidden;
+  }
+  .about-photo img{
+    width:100%;height:100%;object-fit:cover;display:block;
+    filter:saturate(1.05) contrast(1.02);
+  }
+  .about-photo::after{
+    content:"";position:absolute;inset:8px;border:1px solid rgba(212,175,114,0.25);border-radius:14px;pointer-events:none;z-index:1;
+  }
+  .about h3{margin-bottom:16px}
+  .about p{color:var(--text);margin-bottom:14px;font-size:1.02rem}
+  .about p strong{color:var(--gold-bright)}
+  @media(max-width:780px){.about-block{grid-template-columns:1fr;padding:30px 24px}}
+
+  /* === FAQ === */
+  .faq{max-width:820px;margin:0 auto}
+  .faq-item{
+    background:var(--card);border:1px solid var(--line);border-radius:14px;
+    margin-bottom:14px;overflow:hidden;transition:border-color .3s ease;
+  }
+  .faq-item:hover{border-color:rgba(212,175,114,0.3)}
+  .faq-q{
+    padding:22px 26px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;
+    color:var(--cream);font-weight:600;font-size:1.05rem;user-select:none;
+  }
+  .faq-q::after{content:"+";color:var(--gold);font-size:1.6rem;transition:transform .3s ease;line-height:1}
+  .faq-item.open .faq-q::after{transform:rotate(45deg)}
+  .faq-a{
+    max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;
+    padding:0 26px;color:var(--muted);font-size:1rem;line-height:1.75;
+  }
+  .faq-item.open .faq-a{padding:0 26px 24px;max-height:600px}
+
+  /* === FINAL CTA === */
+  .final{
+    background:
+      radial-gradient(ellipse at 50% 50%,rgba(212,175,114,0.12),transparent 70%),
+      linear-gradient(180deg,var(--bg-soft),var(--bg));
+    text-align:center;padding:120px 0;
+  }
+  .final h2{margin-bottom:20px;max-width:780px;margin-left:auto;margin-right:auto}
+  .final p{color:var(--muted);font-size:1.15rem;max-width:640px;margin:0 auto 36px}
+
+  /* === FOOTER === */
+  footer{
+    border-top:1px solid var(--line);padding:40px 0 30px;
+    text-align:center;color:var(--muted);font-size:.85rem;
+    background:var(--bg-soft);
+  }
+  footer p{color:var(--muted);font-size:.85rem;margin-bottom:8px}
+  footer a{color:var(--gold);text-decoration:underline}
+
+  /* === STICKY CTA MOBILE === */
+  .sticky-cta{
+    display:none;position:fixed;bottom:0;left:0;right:0;
+    background:linear-gradient(180deg,rgba(11,10,8,0.92),var(--bg));
+    backdrop-filter:blur(12px);padding:14px 16px;
+    border-top:1px solid var(--line);z-index:100;
+    box-shadow:0 -10px 40px rgba(0,0,0,0.6);
+  }
+  .sticky-cta .cta{width:100%;padding:16px;font-size:.95rem}
+  @media(max-width:780px){
+    .sticky-cta{display:block}
+    body{padding-bottom:84px}
+    section{padding:70px 0}
+    .about-block{padding:30px 24px}
+  }
+
+  /* === ANIMATION === */
+  .fade-in{opacity:0;transform:translateY(24px);transition:opacity .8s ease, transform .8s ease}
+  .fade-in.visible{opacity:1;transform:translateY(0)}
+</style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '412518964606895');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=412518964606895&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+
+</head>
+<body>
+
+<div class="topbar">
+  ⚡ <strong>20 de Maio · Maringá-PR</strong> · Apenas 45 vagas · A partir de R$ 11,04 (12x)
+</div>
+
+<!-- ========= HERO ========= -->
+<header class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <span class="pretitle">Evento Presencial Transformador</span>
+      <h1>Você não está repetindo a sua vida.<br/><em>Você está repetindo a história da sua família.</em></h1>
+      <p class="hero-sub">
+        Descubra os <strong style="color:var(--cream)">padrões invisíveis</strong> que você herdou e que estão sabotando, em silêncio, suas relações, sua prosperidade, sua saúde e a sua paz — antes mesmo de você perceber.
+      </p>
+      <div class="hero-cta-wrap">
+        <a href="https://www.sympla.com.br/evento/herancas-invisiveis-os-padroes-familiares-que-controlam-sua-vida/3372889" class="cta" target="_blank" rel="noopener">
+          Quero quebrar esse padrão →
+        </a>
+        <p class="cta-mini">🔒 Inscrição via Sympla · A partir de <span>12x de R$ 11,04</span> · Apenas <span>45 vagas</span></p>
+      </div>
+
+      <!-- Event quick info -->
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:48px">
+        <div style="display:flex;align-items:center;gap:10px;background:rgba(212,175,114,0.06);border:1px solid var(--line);border-radius:99px;padding:10px 20px;font-size:.92rem;color:var(--cream)">
+          <span style="color:var(--gold)">📅</span> 20 de Maio de 2026 · 19h às 20h30
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;background:rgba(212,175,114,0.06);border:1px solid var(--line);border-radius:99px;padding:10px 20px;font-size:.92rem;color:var(--cream)">
+          <span style="color:var(--gold)">📍</span> Mezanino do Mercado Municipal · Maringá-PR
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;background:rgba(212,175,114,0.06);border:1px solid var(--line);border-radius:99px;padding:10px 20px;font-size:.92rem;color:var(--cream)">
+          <span style="color:var(--gold)">🎟️</span> Apenas 45 lugares
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ========= PAIN ========= -->
+<section class="pain">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="pretitle">Reconhece esse ciclo?</span>
+      <h2>Os mesmos problemas. As mesmas pessoas. As mesmas dores.</h2>
+      <p>Por mais que você tente mudar, parece que existe uma força invisível te trazendo de volta para o mesmo lugar. Não é coincidência. <strong style="color:var(--gold-bright)">É herança.</strong></p>
+    </div>
+
+    <div class="pain-list">
+      <div class="pain-item fade-in">
+        <div class="icon">💔</div>
+        <h3>Relacionamentos que se repetem</h3>
+        <p>Você atrai sempre o mesmo tipo de pessoa, vive os mesmos conflitos e termina sempre no mesmo cenário emocional — como se fosse roteirizado.</p>
+      </div>
+      <div class="pain-item fade-in">
+        <div class="icon">💸</div>
+        <h3>Bloqueios financeiros</h3>
+        <p>Você ganha, mas o dinheiro escapa. Sobe e cai. Tem culpa de prosperar. Algo invisível parece colocar um teto na sua vida material.</p>
+      </div>
+      <div class="pain-item fade-in">
+        <div class="icon">😰</div>
+        <h3>Ansiedade e medos sem origem</h3>
+        <p>Aquele aperto no peito. Aquela sensação de que algo ruim vai acontecer. Medo de ser feliz. Sintomas que terapia tradicional não consegue alcançar.</p>
+      </div>
+      <div class="pain-item fade-in">
+        <div class="icon">🧬</div>
+        <h3>Doenças que já vieram na família</h3>
+        <p>Padrões físicos, emocionais e mentais que aparecem em várias gerações como se fossem destino — mas não são. São pactos invisíveis esperando para serem desfeitos.</p>
+      </div>
+      <div class="pain-item fade-in">
+        <div class="icon">🚪</div>
+        <h3>Auto-sabotagem na hora do salto</h3>
+        <p>Quando a vida está prestes a melhorar, alguma coisa "dá errado". Você se trai, perde a oportunidade, foge. E não entende o porquê.</p>
+      </div>
+      <div class="pain-item fade-in">
+        <div class="icon">⚖️</div>
+        <h3>Lealdade invisível ao sofrimento</h3>
+        <p>Inconscientemente você não se permite ser mais feliz, mais rico ou mais livre que pais e avós. Existe uma fidelidade silenciosa à dor da sua linhagem.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========= REVELATION ========= -->
+<section class="revelation">
+  <div class="container">
+    <p class="quote fade-in">A maioria das pessoas não está vivendo a própria vida — está cumprindo, sem saber, um destino que pertence a outra pessoa da sua árvore familiar.</p>
+    <p class="author fade-in">— A descoberta que muda tudo</p>
+  </div>
+</section>
+
+<!-- ========= BENEFITS ========= -->
+<section>
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="pretitle">O que você vai descobrir</span>
+      <h2>Em poucas horas, você vai enxergar o que ninguém te mostrou em anos de terapia</h2>
+      <p>Este não é mais um curso teórico. É uma experiência prática, profunda e libertadora — desenhada para gerar mudança real, não só consciência.</p>
+    </div>
+
+    <div class="benefits-grid">
+      <div class="benefit fade-in">
+        <div class="num">1</div>
+        <h3>Mapeie sua árvore invisível</h3>
+        <p>Identifique exatamente quais padrões você herdou — de quem, por que, e como eles se manifestam hoje na sua vida prática (relacionamentos, dinheiro, corpo).</p>
+      </div>
+      <div class="benefit fade-in">
+        <div class="num">2</div>
+        <h3>Reconheça as lealdades invisíveis</h3>
+        <p>Compreenda o motivo emocional profundo pelo qual você "não consegue" prosperar, ser feliz ou se libertar — e descubra que essa fidelidade tem solução.</p>
+      </div>
+      <div class="benefit fade-in">
+        <div class="num">3</div>
+        <h3>Quebre o ciclo na raiz</h3>
+        <p>Aprenda o método para interromper a transmissão geracional — não na cabeça, mas no nível energético e sistêmico onde o padrão realmente vive.</p>
+      </div>
+      <div class="benefit fade-in">
+        <div class="num">4</div>
+        <h3>Devolva o que não é seu</h3>
+        <p>Solte cargas, dores, missões e culpas que você carrega há décadas pensando que eram suas — e que na verdade pertencem a alguém antes de você.</p>
+      </div>
+      <div class="benefit fade-in">
+        <div class="num">5</div>
+        <h3>Recupere a sua força original</h3>
+        <p>Reconecte-se com a corrente de bênçãos da sua linhagem — porque toda família tem padrões pesados, mas também tem força ancestral disponível para ser herdada.</p>
+      </div>
+      <div class="benefit fade-in">
+        <div class="num">6</div>
+        <h3>Saia de lá outra pessoa</h3>
+        <p>Levando ferramentas práticas, clareza absoluta e — principalmente — uma decisão interna que vai ecoar em todas as áreas da sua vida nos meses seguintes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========= ABOUT ========= -->
+<section style="background:var(--bg-soft)" class="about">
+  <div class="container">
+    <div class="about-block fade-in">
+      <div class="about-photo">
+        <img src="assets/images/adreano.jpg" alt="Adreano Vitor de Lima — Palestrante de Heranças Invisíveis" loading="lazy" />
+      </div>
+      <div>
+        <span class="pretitle">Palestrante</span>
+        <h3 style="margin-top:16px">Adreano Vitor de Lima</h3>
+        <p>Especialista em <strong>padrões familiares</strong>, traumas geracionais e o impacto invisível que histórias da família exercem sobre a vida emocional, relacional e financeira de cada um de nós.</p>
+        <p>Adreano conduz uma noite inteira de mergulho em consciência — não é uma palestra motivacional rasa: é uma escavação cuidadosa daquilo que ninguém te ensinou a ver, mas que está moldando suas decisões há décadas.</p>
+        <p style="color:var(--muted);font-size:.95rem;margin-top:20px;font-style:italic">"Você não começou essa história. Mas pode ser quem vai encerrá-la."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========= FOR WHO ========= -->
+<section class="forwho">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="pretitle">Honestidade total</span>
+      <h2>Esse evento é (e não é) para você</h2>
+      <p>Prefiro te falar a verdade agora do que te vender uma vaga que não vai te servir.</p>
+    </div>
+
+    <div class="forwho-cols">
+      <div class="forwho-card yes fade-in">
+        <h3>É para você se…</h3>
+        <ul>
+          <li>Você sente que está "rodando em círculo" há anos e algo invisível parece te puxar de volta.</li>
+          <li>Você já fez terapia, leu livros, fez cursos — e ainda assim algo não foi resolvido na raiz.</li>
+          <li>Você reconhece padrões repetidos na sua família (vícios, separações, doenças, brigas, falência).</li>
+          <li>Você quer mudança real, profunda e sistêmica — não só insight intelectual.</li>
+          <li>Você está disposto(a) a olhar com coragem para a sua história e construir uma nova.</li>
+        </ul>
+      </div>
+      <div class="forwho-card no fade-in">
+        <h3>Não é para você se…</h3>
+        <ul>
+          <li>Você acha que a culpa de tudo é dos seus pais e quer um lugar para reclamar.</li>
+          <li>Você não está disposto(a) a sentir, olhar para dentro e participar ativamente.</li>
+          <li>Você procura uma solução mágica que aja sem você fazer a sua parte.</li>
+          <li>Você está em crise psiquiátrica aguda e não tem acompanhamento clínico no momento.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========= TRUTHS ========= -->
+<section class="testimonials">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="pretitle">Reflita por um instante</span>
+      <h2>Existem verdades que ninguém te conta — mas que você sente desde sempre</h2>
+    </div>
+
+    <div class="testi-grid">
+      <div class="testi fade-in">
+        <p style="font-style:normal;font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--cream);line-height:1.4;margin-bottom:0">"Você pode estar tentando mudar a sua vida… <em style="color:var(--gold-bright)">sem perceber que está repetindo a história da sua família</em>."</p>
+      </div>
+      <div class="testi fade-in">
+        <p style="font-style:normal;font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--cream);line-height:1.4;margin-bottom:0">"Muitas decisões que você acha que são suas… <em style="color:var(--gold-bright)">não são</em>."</p>
+      </div>
+      <div class="testi fade-in">
+        <p style="font-style:normal;font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--cream);line-height:1.4;margin-bottom:0">"O inconsciente familiar é silencioso… <em style="color:var(--gold-bright)">mas extremamente poderoso</em>."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========= OFFER ========= -->
+<section class="offer">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="pretitle">Sua decisão</span>
+      <h2>Garanta sua vaga agora — antes que feche</h2>
+      <p>O salão tem lugares limitados. Quem decide rápido, garante. Quem hesita, perde.</p>
+    </div>
+
+    <div class="offer-card fade-in">
+      <span class="offer-badge">⚡ Apenas 45 vagas · Vendas até 20/05/2026</span>
+
+      <div style="margin:20px 0 8px;color:var(--muted);font-size:.95rem">Ingresso Único</div>
+      <div class="price">
+        R$ 97
+        <small>OU 12X DE R$ 11,04 NO CARTÃO</small>
+      </div>
+
+      <p class="price-info">Total com taxa: <strong>R$ 106,70</strong> · Pagamento via <strong>Sympla</strong> (Pix, Cartão, Boleto)</p>
+
+      <div style="background:rgba(212,175,114,0.06);border:1px solid var(--line);border-radius:14px;padding:20px 24px;margin:24px 0;text-align:left">
+        <div style="font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;font-weight:600">Sua inscrição inclui</div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:.98rem">
+          <div>✦ Acesso à palestra presencial completa (1h30 de imersão guiada)</div>
+          <div>✦ Espaço intimista com apenas 45 participantes</div>
+          <div>✦ Mezanino do Mercado Municipal — Maringá-PR</div>
+          <div>✦ Condução pessoal de Adreano Vitor de Lima</div>
+        </div>
+      </div>
+
+      <div style="margin:24px 0 8px;font-size:.85rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase">⏳ O evento começa em</div>
+      <div class="timer" id="timer">
+        <div class="timer-box"><div class="timer-num" id="d">00</div><div class="timer-lbl">Dias</div></div>
+        <div class="timer-box"><div class="timer-num" id="h">00</div><div class="timer-lbl">Horas</div></div>
+        <div class="timer-box"><div class="timer-num" id="m">00</div><div class="timer-lbl">Min</div></div>
+        <div class="timer-box"><div class="timer-num" id="s">00</div><div class="timer-lbl">Seg</div></div>
+      </div>
+
+      <a href="https://www.sympla.com.br/evento/herancas-invisiveis-os-padroes-familiares-que-controlam-sua-vida/3372889" class="cta" target="_blank" rel="noopener" style="width:100%;max-width:420px;margin-top:20px">
+        GARANTIR MINHA VAGA →
+      </a>
+      <p class="cta-mini" style="margin-top:14px">🔒 Inscrição segura via Sympla · Confirmação imediata por e-mail</p>
+    </div>
+
+    <div class="guarantee fade-in">
+      <div class="guarantee-seal" style="font-size:.78rem">INSCRIÇÃO<br/>SEGURA<br/>SYMPLA</div>
+      <div>
+        <h3>Compra protegida pela maior plataforma de eventos do Brasil</h3>
+        <p>Sua inscrição é processada e protegida pelo <strong style="color:#cbeed8">Sympla</strong>, com certificado de segurança e direito ao reembolso conforme política da plataforma. Em caso de dúvidas, fale diretamente com o produtor: <strong style="color:var(--cream)">(11) 98101-0102</strong>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========= FAQ ========= -->
+<section style="background:var(--bg-soft)">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="pretitle">Perguntas frequentes</span>
+      <h2>Suas dúvidas, respondidas com clareza</h2>
+    </div>
+
+    <div class="faq">
+      <div class="faq-item">
+        <div class="faq-q">Onde e quando exatamente acontece a palestra?</div>
+        <div class="faq-a">Dia <strong>20 de maio de 2026 (quarta-feira), das 19h às 20h30</strong>, no <strong>Mezanino do Mercado Municipal de Maringá</strong> — Av. Prudente de Morais, 601, Maringá-PR. Chegue com 20 minutos de antecedência para o credenciamento.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Quanto custa e como pago?</div>
+        <div class="faq-a">O ingresso é <strong>R$ 97,00</strong> (R$ 106,70 com a taxa do Sympla), parcelável em <strong>até 12x de R$ 11,04</strong> no cartão. Também aceita Pix e boleto. Todo o processo de pagamento é feito de forma segura no Sympla.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Eu nunca fiz nada parecido. Vou conseguir acompanhar?</div>
+        <div class="faq-a">Sim. A palestra foi desenhada tanto para quem está começando agora a olhar para essas questões quanto para quem já tem trajetória em autoconhecimento. A condução é acolhedora, profunda e sem exposição forçada — você participa no nível que se sentir confortável.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Vou precisar contar minha história em público?</div>
+        <div class="faq-a">Não. Esta é uma palestra com momentos reflexivos, não uma terapia em grupo. Sua presença é o suficiente — o trabalho interno acontece silenciosamente em você enquanto o Adreano conduz o conteúdo.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Isso substitui terapia ou tratamento médico?</div>
+        <div class="faq-a">Não. Esta é uma experiência educativa e transformacional, complementar a qualquer trabalho terapêutico ou clínico em curso. Se você está em tratamento, mantenha o acompanhamento profissional.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Quantas vagas existem?</div>
+        <div class="faq-a">A capacidade total é de <strong>45 lugares</strong>. Trabalhamos com turma intimista por uma escolha consciente: o trabalho exige proximidade. As vendas vão até <strong>20/05/2026</strong> ou até esgotarem — o que vier primeiro.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Quem é o palestrante?</div>
+        <div class="faq-a"><strong>Adreano Vitor de Lima</strong>, especialista em padrões familiares e dinâmicas geracionais. Para falar diretamente com a produção: <strong>(11) 98101-0102</strong>.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========= FINAL CTA ========= -->
+<section class="final">
+  <div class="container fade-in">
+    <h2>Você pode continuar tentando entender sozinho — ou pode atravessar essa porta.</h2>
+    <p>O padrão que está te paralisando não vai se resolver sozinho com mais um livro, mais uma terapia, mais um final de ano prometendo mudar. Ele só se resolve quando alguém finalmente <strong style="color:var(--gold-bright)">interrompe a corrente</strong>. E essa pessoa pode ser você. Hoje.</p>
+    <a href="https://www.sympla.com.br/evento/herancas-invisiveis-os-padroes-familiares-que-controlam-sua-vida/3372889" class="cta" target="_blank" rel="noopener">
+      Quero ser quem quebra esse ciclo →
+    </a>
+    <p class="cta-mini" style="margin-top:18px">🔒 Inscrição via Sympla · Vagas limitadas</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© <span id="yr"></span> Heranças Invisíveis · Todos os direitos reservados</p>
+    <p>Página oficial do evento: <a href="https://www.sympla.com.br/evento/herancas-invisiveis-os-padroes-familiares-que-controlam-sua-vida/3372889" target="_blank" rel="noopener">Sympla</a></p>
+    <p style="margin-top:12px;font-size:.78rem">Este site não é afiliado ao Facebook Inc. ou Meta Platforms. Resultados individuais podem variar.</p>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-cta">
+  <a href="https://www.sympla.com.br/evento/herancas-invisiveis-os-padroes-familiares-que-controlam-sua-vida/3372889" class="cta" target="_blank" rel="noopener">
+    GARANTIR VAGA · 12X R$ 11,04 →
+  </a>
+</div>
+
+<script>
+  // Year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // FAQ
+  document.querySelectorAll('.faq-item').forEach(item=>{
+    item.querySelector('.faq-q').addEventListener('click',()=>{
+      item.classList.toggle('open');
+    });
+  });
+
+  // Fade in on scroll
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:.12});
+  document.querySelectorAll('.fade-in').forEach(el=>io.observe(el));
+
+  // Countdown to real event date: 20/05/2026 at 19:00 (America/Sao_Paulo, UTC-3)
+  (function(){
+    const eventDate = new Date('2026-05-20T19:00:00-03:00').getTime();
+    const pad = n => String(Math.max(0,n)).padStart(2,'0');
+    function tick(){
+      const diff = eventDate - Date.now();
+      if(diff<=0){
+        ['d','h','m','s'].forEach(id=>document.getElementById(id).textContent='00');
+        return;
+      }
+      const d = Math.floor(diff/86400000);
+      const h = Math.floor(diff%86400000/3600000);
+      const m = Math.floor(diff%3600000/60000);
+      const s = Math.floor(diff%60000/1000);
+      document.getElementById('d').textContent=pad(d);
+      document.getElementById('h').textContent=pad(h);
+      document.getElementById('m').textContent=pad(m);
+      document.getElementById('s').textContent=pad(s);
+    }
+    tick();setInterval(tick,1000);
+  })();
+</script>
+
+<!-- ===== TRACKING & ATTRIBUTION ===== -->
+<script>
+(function(){
+  var STORAGE_KEY = 'hi_attrib';
+  var SESSION_KEY = 'hi_session';
+  var SYMPLA_HOST  = 'sympla.com.br';
+
+  function getCookie(name){
+    var m = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+    return m ? decodeURIComponent(m.pop()) : null;
+  }
+
+  function uuid(){
+    if (window.crypto && crypto.randomUUID) return crypto.randomUUID();
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c){
+      var r = Math.random()*16|0, v = c==='x' ? r : (r&0x3|0x8);
+      return v.toString(16);
+    });
+  }
+
+  function getOrCreateSessionId(){
+    try {
+      var sid = localStorage.getItem(SESSION_KEY);
+      if (!sid){ sid = uuid(); localStorage.setItem(SESSION_KEY, sid); }
+      return sid;
+    } catch(e){ return uuid(); }
+  }
+
+  function captureAttribution(){
+    var params = new URLSearchParams(window.location.search);
+    var fields = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','gclid','ttclid'];
+    var current = {};
+    fields.forEach(function(k){ if (params.get(k)) current[k] = params.get(k); });
+
+    // First-touch attribution: only overwrite if we have new UTMs in URL
+    if (Object.keys(current).length){
+      current.captured_at = new Date().toISOString();
+      current.landing_url = window.location.href;
+      current.referrer = document.referrer || null;
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(current)); } catch(e){}
+    }
+
+    // Read back (either fresh or persisted from prior visit)
+    var stored = {};
+    try { stored = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch(e){}
+    return stored;
+  }
+
+  function enrichSymplaLinks(attrib, sessionId){
+    var links = document.querySelectorAll('a[href*="' + SYMPLA_HOST + '"]');
+    links.forEach(function(a){
+      try {
+        var url = new URL(a.href);
+        // Forward UTMs
+        ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
+          if (attrib[k] && !url.searchParams.has(k)) url.searchParams.set(k, attrib[k]);
+        });
+        // Default UTMs if none came from ad
+        if (!url.searchParams.has('utm_source')) url.searchParams.set('utm_source', 'site');
+        if (!url.searchParams.has('utm_medium')) url.searchParams.set('utm_medium', 'landing');
+        if (!url.searchParams.has('utm_campaign')) url.searchParams.set('utm_campaign', 'herancas-invisiveis');
+        // Session reference for later matching
+        url.searchParams.set('hi_sid', sessionId);
+        a.href = url.toString();
+      } catch(e){}
+    });
+  }
+
+  function bindCheckoutEvents(sessionId){
+    var links = document.querySelectorAll('a[href*="' + SYMPLA_HOST + '"]');
+    links.forEach(function(a){
+      a.addEventListener('click', function(){
+        var eventId = uuid();
+        try { sessionStorage.setItem('hi_last_ic_event', eventId); } catch(e){}
+        if (typeof fbq === 'function'){
+          fbq('track', 'InitiateCheckout', {
+            content_name: 'Heranças Invisíveis',
+            content_category: 'evento-presencial',
+            content_ids: ['herancas-invisiveis-maringa-2026-05-20'],
+            value: 97.00,
+            currency: 'BRL'
+          }, { eventID: eventId });
+        }
+      }, { passive: true });
+    });
+  }
+
+  // Run after Pixel is loaded so fbp/fbc cookies are set
+  function init(){
+    var attrib = captureAttribution();
+    var sessionId = getOrCreateSessionId();
+    enrichSymplaLinks(attrib, sessionId);
+    bindCheckoutEvents(sessionId);
+
+    // Optional: send attribution snapshot to your tracking stack endpoint here
+    // fetch('/api/track/landing', { method:'POST', body: JSON.stringify({...attrib, sid:sessionId, fbp:getCookie('_fbp'), fbc:getCookie('_fbc')}) });
+  }
+
+  if (document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+# ===== Secrets & env =====
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# ===== Node =====
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+package-lock.json.bak
+
+# ===== Cloudflare / Wrangler =====
+.wrangler/
+.dev.vars
+wrangler.toml
+!wrangler.toml.example
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== Editores =====
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ===== Build outputs =====
+dist/
+build/
+out/
+.next/
+.cache/
+
+# ===== Logs =====
+*.log
+logs/
+
+# ===== Dados sensíveis de campanha (audiências, listas) =====
+*.audience.csv
+*.contacts.csv
+data/private/
