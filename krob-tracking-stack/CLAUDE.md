@@ -117,6 +117,7 @@ Hop-by-hop debugging bible: `docs/data-flow.md`
 | `webhook/eduzz/[slug].js` | Eduzz adapter. Gates on `EDUZZ_WEBHOOK_SLUG`, parses Eduzz shape, delegates to `_core.js`. |
 | `webhook/hotmart/[slug].js` | Hotmart adapter. Gates on `HOTMART_WEBHOOK_SLUG`, parses Hotmart shape. |
 | `webhook/kiwify/[slug].js` | Kiwify adapter. Gates on `KIWIFY_WEBHOOK_SLUG`, parses Kiwify shape. |
+| `webhook/sympla/[slug].js` | Sympla adapter (event ticketing). Gates on `SYMPLA_WEBHOOK_SLUG`. Defensive parser — `trk` arrives via `?ref=` URL param if at all; UTMs not carried in payload. See `docs/platforms/sympla.md`. |
 | `api/revenue.js` | Dashboard: gross revenue, sales, AOV, daily time series from `purchase_log`. |
 | `api/products.js` | Dashboard: per-product breakdown + time series from `purchase_items`. |
 | `api/utm-breakdown.js` | Dashboard: tabbed UTM drill-down from `purchase_log` with cascading filters. |
@@ -162,6 +163,7 @@ live under `.claude/skills/<name>/SKILL.md`.
 | Eduzz-specific notes | `docs/platforms/eduzz.md` |
 | Hotmart-specific notes | `docs/platforms/hotmart.md` |
 | Kiwify-specific notes | `docs/platforms/kiwify.md` |
+| Sympla-specific notes (event ticketing) | `docs/platforms/sympla.md` |
 | Adding a new sales platform | `docs/platforms/_template.md` |
 | Setting up Meta Ads spend sync via external cron | `docs/ad-spend-sync.md` |
 
