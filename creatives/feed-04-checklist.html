@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Feed 04 — Checklist (1080x1080)</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#222;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:20px;font-family:'Inter',sans-serif}
+  .ad{
+    width:1080px;height:1080px;
+    background:
+      radial-gradient(ellipse at 50% 0%,rgba(212,175,114,0.1),transparent 60%),
+      #0b0a08;
+    position:relative;overflow:hidden;
+    padding:80px 90px;color:#f6efe2;
+    display:flex;flex-direction:column;
+  }
+  .ad::before{
+    content:"";position:absolute;inset:0;
+    background-image:radial-gradient(circle at 1px 1px,rgba(212,175,114,0.05) 1px,transparent 0);
+    background-size:50px 50px;pointer-events:none;
+  }
+  .ad::after{
+    content:"";position:absolute;inset:30px;border:1px solid rgba(212,175,114,0.2);border-radius:14px;pointer-events:none;
+  }
+  .pretitle{
+    align-self:center;
+    font-size:16px;letter-spacing:.3em;text-transform:uppercase;
+    color:#d4af72;font-weight:600;margin-bottom:24px;
+    border:1px solid rgba(212,175,114,0.4);padding:10px 26px;border-radius:99px;
+    background:rgba(212,175,114,0.05);position:relative;z-index:2;
+  }
+  h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:54px;line-height:1.15;font-weight:600;
+    text-align:center;color:#f6efe2;letter-spacing:-0.01em;
+    margin-bottom:46px;position:relative;z-index:2;
+  }
+  h1 em{color:#f0cd92;font-style:italic}
+  ul{list-style:none;position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px;max-width:780px;margin:0 auto;width:100%}
+  li{
+    background:rgba(212,175,114,0.04);
+    border:1px solid rgba(212,175,114,0.18);
+    border-radius:12px;padding:18px 26px;
+    color:#e9e1d0;font-size:24px;font-weight:400;
+    display:flex;align-items:center;gap:18px;
+  }
+  li .check{
+    width:32px;height:32px;border-radius:50%;
+    background:linear-gradient(135deg,#f0cd92,#9d7d49);
+    color:#1a1410;font-weight:700;font-size:18px;
+    display:flex;align-items:center;justify-content:center;
+    flex-shrink:0;
+  }
+  .punchline{
+    text-align:center;margin-top:46px;position:relative;z-index:2;
+    font-family:'Cormorant Garamond',serif;
+    font-size:36px;font-style:italic;color:#f0cd92;font-weight:500;
+  }
+  .footer{
+    text-align:center;margin-top:auto;padding-top:24px;
+    font-size:15px;letter-spacing:.22em;text-transform:uppercase;
+    color:#a9a193;font-weight:500;position:relative;z-index:2;
+  }
+  .footer strong{color:#f6efe2}
+</style>
+</head>
+<body>
+<div class="ad">
+  <span class="pretitle">Reconhece esses sinais?</span>
+  <h1>Não é você.<br/><em>É padrão familiar.</em></h1>
+  <ul>
+    <li><span class="check">✓</span> Sempre o mesmo tipo de relacionamento</li>
+    <li><span class="check">✓</span> Bloqueio invisível com dinheiro</li>
+    <li><span class="check">✓</span> Ansiedade sem motivo claro</li>
+    <li><span class="check">✓</span> Auto-sabotagem na hora do salto</li>
+    <li><span class="check">✓</span> Doenças repetindo na linhagem</li>
+  </ul>
+  <div class="punchline">Em 1h30, você quebra o ciclo.</div>
+  <div class="footer">Heranças Invisíveis · <strong>20/05 Maringá</strong> · 45 vagas</div>
+</div>
+</body>
+</html>

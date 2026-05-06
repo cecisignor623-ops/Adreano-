@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Story 01 — Photo Vertical (1080x1920)</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#222;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:20px;font-family:'Inter',sans-serif}
+  .ad{
+    width:1080px;height:1920px;
+    position:relative;overflow:hidden;
+    color:#f6efe2;
+  }
+  .photo{
+    position:absolute;inset:0;
+    background-image:url('adreano.jpg');
+    background-size:cover;
+    background-position:center 22%;
+    filter:saturate(0.9) contrast(1.05);
+  }
+  .overlay{
+    position:absolute;inset:0;
+    background:
+      linear-gradient(180deg,
+        rgba(11,10,8,0.65) 0%,
+        rgba(11,10,8,0.0) 28%,
+        rgba(11,10,8,0.0) 55%,
+        rgba(11,10,8,0.85) 78%,
+        rgba(11,10,8,0.99) 100%);
+  }
+  .grain{
+    position:absolute;inset:0;
+    background-image:radial-gradient(circle at 1px 1px,rgba(212,175,114,0.04) 1px,transparent 0);
+    background-size:40px 40px;
+    pointer-events:none;
+  }
+  .border{
+    position:absolute;inset:30px;
+    border:1px solid rgba(212,175,114,0.3);border-radius:14px;pointer-events:none;z-index:2;
+  }
+  .top{
+    position:absolute;top:120px;left:0;right:0;
+    text-align:center;z-index:3;
+  }
+  .pretitle{
+    display:inline-block;
+    font-size:18px;letter-spacing:.3em;text-transform:uppercase;
+    color:#f0cd92;font-weight:600;
+    padding:14px 32px;border-radius:99px;
+    background:rgba(11,10,8,0.7);
+    border:1px solid rgba(212,175,114,0.5);
+    backdrop-filter:blur(6px);
+  }
+  .top-headline{
+    margin-top:46px;
+    font-family:'Cormorant Garamond',serif;
+    font-size:78px;line-height:1.08;font-weight:600;color:#f6efe2;
+    letter-spacing:-0.015em;
+    padding:0 70px;
+    text-shadow:0 4px 20px rgba(0,0,0,0.7);
+  }
+  .top-headline em{color:#f0cd92;font-style:italic}
+  .bottom{
+    position:absolute;bottom:140px;left:60px;right:60px;
+    z-index:3;text-align:center;
+  }
+  .quote{
+    font-family:'Cormorant Garamond',serif;
+    font-size:48px;line-height:1.25;font-style:italic;color:#f0cd92;
+    margin-bottom:50px;font-weight:500;
+    letter-spacing:-0.005em;
+  }
+  .speaker{
+    border-top:1px solid rgba(212,175,114,0.3);padding-top:40px;
+    font-size:18px;color:#a9a193;letter-spacing:.18em;text-transform:uppercase;font-weight:500;
+  }
+  .speaker strong{color:#f6efe2;display:block;font-family:'Cormorant Garamond',serif;font-size:42px;letter-spacing:-0.005em;text-transform:none;font-style:normal;font-weight:600;color:#f0cd92;margin-top:12px}
+  .info{margin-top:32px;font-size:18px;color:#e9e1d0;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+  .info strong{color:#f6efe2;font-weight:700}
+  .cta-arrow{
+    position:absolute;bottom:50px;left:0;right:0;
+    text-align:center;z-index:3;
+    font-size:14px;color:#d4af72;letter-spacing:.3em;text-transform:uppercase;font-weight:600;
+  }
+</style>
+</head>
+<body>
+<div class="ad">
+  <div class="photo"></div>
+  <div class="overlay"></div>
+  <div class="grain"></div>
+  <div class="border"></div>
+
+  <div class="top">
+    <div class="pretitle">Evento Presencial · Maringá</div>
+    <div class="top-headline">Quebre os <em>padrões</em><br/>que se repetem<br/>na sua vida</div>
+  </div>
+
+  <div class="bottom">
+    <div class="quote">"Você não começou essa história.<br/>Mas pode encerrar ela."</div>
+    <div class="speaker">
+      Com
+      <strong>Adreano Vitor de Lima</strong>
+    </div>
+    <div class="info"><strong>20 de Maio</strong> · 45 vagas · 12x R$ 11,04</div>
+  </div>
+
+  <div class="cta-arrow">⬆ Arraste pra cima ⬆</div>
+</div>
+</body>
+</html>

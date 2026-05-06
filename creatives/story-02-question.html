@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Story 02 — Question Hook Vertical (1080x1920)</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#222;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:20px;font-family:'Inter',sans-serif}
+  .ad{
+    width:1080px;height:1920px;
+    background:
+      radial-gradient(ellipse at 30% 30%,rgba(212,175,114,0.2),transparent 55%),
+      radial-gradient(ellipse at 70% 75%,rgba(212,175,114,0.12),transparent 55%),
+      #0b0a08;
+    position:relative;overflow:hidden;
+    display:flex;flex-direction:column;justify-content:space-between;
+    padding:140px 80px;color:#f6efe2;
+  }
+  .ad::before{
+    content:"";position:absolute;inset:0;
+    background-image:radial-gradient(circle at 1px 1px,rgba(212,175,114,0.06) 1px,transparent 0);
+    background-size:55px 55px;pointer-events:none;
+  }
+  .ad::after{
+    content:"";position:absolute;inset:40px;border:1px solid rgba(212,175,114,0.25);border-radius:18px;pointer-events:none;
+  }
+  .top{position:relative;z-index:2;text-align:center}
+  .pretitle{
+    display:inline-block;
+    font-size:16px;letter-spacing:.32em;text-transform:uppercase;
+    color:#d4af72;font-weight:700;
+    border:1px solid rgba(212,175,114,0.5);padding:14px 32px;border-radius:99px;
+    background:rgba(212,175,114,0.05);
+  }
+  .question{
+    flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;
+    text-align:center;position:relative;z-index:2;gap:50px;
+    padding:0 20px;
+  }
+  .quote-mark{
+    font-family:'Cormorant Garamond',serif;
+    font-size:140px;color:#d4af72;line-height:0.3;font-weight:700;
+    margin-bottom:0;
+  }
+  h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:130px;line-height:1.05;font-weight:600;
+    color:#f6efe2;letter-spacing:-0.025em;
+  }
+  h1 em{color:#f0cd92;font-style:italic}
+  .answer{
+    font-size:30px;color:#a9a193;font-weight:300;line-height:1.55;
+    max-width:840px;
+  }
+  .answer strong{color:#f6efe2;font-weight:500}
+  .cta-block{
+    position:relative;z-index:2;text-align:center;
+    border-top:1px solid rgba(212,175,114,0.3);padding-top:50px;
+  }
+  .cta-name{
+    font-family:'Cormorant Garamond',serif;font-size:46px;color:#f0cd92;font-weight:600;letter-spacing:-0.01em;
+    margin-bottom:18px;
+  }
+  .cta-info{font-size:18px;color:#e9e1d0;letter-spacing:.22em;text-transform:uppercase;font-weight:500}
+  .cta-info strong{color:#f6efe2;font-weight:700}
+  .cta-button{
+    margin-top:44px;display:inline-block;padding:24px 60px;border-radius:99px;
+    background:linear-gradient(135deg,#f0cd92,#9d7d49);
+    color:#1a1410;font-weight:700;font-size:24px;
+    letter-spacing:.05em;text-transform:uppercase;
+    box-shadow:0 12px 40px rgba(212,175,114,0.3);
+  }
+</style>
+</head>
+<body>
+<div class="ad">
+  <div class="top">
+    <span class="pretitle">Heranças Invisíveis · Maringá</span>
+  </div>
+
+  <div class="question">
+    <div class="quote-mark">"</div>
+    <h1>Por que tudo<br/><em>se repete</em>?</h1>
+    <div class="answer">Não é destino. Não é acaso. É um <strong>padrão familiar invisível</strong> esperando alguém interromper.</div>
+  </div>
+
+  <div class="cta-block">
+    <div class="cta-name">1h30 que muda tudo</div>
+    <div class="cta-info">20/05 · Maringá-PR · <strong>45 vagas</strong></div>
+    <div class="cta-button">Garantir minha vaga →</div>
+  </div>
+</div>
+</body>
+</html>

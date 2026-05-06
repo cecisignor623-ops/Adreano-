@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Feed 01 — Quote Hero (1080x1080)</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#222;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:20px;font-family:'Inter',sans-serif}
+  .ad{
+    width:1080px;height:1080px;
+    background:
+      radial-gradient(ellipse at 20% 0%,rgba(212,175,114,0.15),transparent 60%),
+      radial-gradient(ellipse at 80% 100%,rgba(212,175,114,0.1),transparent 60%),
+      #0b0a08;
+    position:relative;overflow:hidden;
+    display:flex;flex-direction:column;justify-content:center;align-items:center;
+    padding:90px 80px;color:#f6efe2;
+  }
+  .ad::before{
+    content:"";position:absolute;inset:0;
+    background-image:radial-gradient(circle at 1px 1px,rgba(212,175,114,0.07) 1px,transparent 0);
+    background-size:50px 50px;pointer-events:none;
+  }
+  .ad::after{
+    content:"";position:absolute;inset:40px;border:1px solid rgba(212,175,114,0.2);border-radius:14px;pointer-events:none;
+  }
+  .pretitle{
+    font-size:18px;letter-spacing:.25em;text-transform:uppercase;
+    color:#d4af72;font-weight:500;margin-bottom:50px;
+    border:1px solid rgba(212,175,114,0.4);padding:14px 32px;border-radius:99px;
+    background:rgba(212,175,114,0.05);
+    position:relative;z-index:2;
+  }
+  .quote{
+    font-family:'Cormorant Garamond',serif;
+    font-size:78px;line-height:1.15;font-weight:500;
+    text-align:center;color:#f6efe2;
+    max-width:880px;letter-spacing:-0.01em;
+    position:relative;z-index:2;
+  }
+  .quote em{font-style:italic;color:#f0cd92}
+  .footer{
+    position:absolute;bottom:80px;left:0;right:0;
+    text-align:center;z-index:2;
+  }
+  .divider{display:flex;align-items:center;justify-content:center;gap:18px;margin-bottom:18px}
+  .divider span{width:60px;height:1px;background:linear-gradient(90deg,transparent,#9d7d49,transparent)}
+  .divider svg{color:#d4af72;width:14px;height:14px}
+  .event{
+    font-family:'Cormorant Garamond',serif;font-size:42px;color:#f0cd92;font-weight:600;margin-bottom:12px;
+    letter-spacing:-0.01em;
+  }
+  .info{font-size:18px;color:#a9a193;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+  .info strong{color:#f6efe2;font-weight:600}
+</style>
+</head>
+<body>
+<div class="ad">
+  <div class="pretitle">Evento Presencial</div>
+  <div class="quote">
+    Você não está repetindo a sua vida.<br/>
+    <em>Você está repetindo a história da sua família.</em>
+  </div>
+
+  <div class="footer">
+    <div class="divider">
+      <span></span>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L14.39 9.42L22 12L14.39 14.58L12 22L9.61 14.58L2 12L9.61 9.42L12 2Z"/></svg>
+      <span></span>
+    </div>
+    <div class="event">Heranças Invisíveis</div>
+    <div class="info"><strong>20 de Maio</strong> · Maringá-PR · 45 vagas</div>
+  </div>
+</div>
+</body>
+</html>

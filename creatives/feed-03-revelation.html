@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Feed 03 — Big Revelation (1080x1080)</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#222;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:20px;font-family:'Inter',sans-serif}
+  .ad{
+    width:1080px;height:1080px;
+    background:
+      radial-gradient(ellipse at 50% 50%,rgba(212,175,114,0.18),transparent 65%),
+      #0e0c09;
+    position:relative;overflow:hidden;
+    display:flex;flex-direction:column;justify-content:center;align-items:center;
+    padding:80px;color:#f6efe2;
+  }
+  .ad::before{
+    content:"";position:absolute;inset:0;
+    background-image:radial-gradient(circle at 1px 1px,rgba(212,175,114,0.06) 1px,transparent 0);
+    background-size:60px 60px;
+    pointer-events:none;
+  }
+  .ad::after{
+    content:"";position:absolute;
+    top:50%;left:50%;transform:translate(-50%,-50%);
+    width:1100px;height:1100px;
+    border:1px solid rgba(212,175,114,0.15);border-radius:50%;
+    pointer-events:none;
+  }
+  .quote-mark{
+    font-family:'Cormorant Garamond',serif;
+    font-size:200px;color:#d4af72;line-height:0.5;
+    margin-bottom:30px;font-weight:700;
+    position:relative;z-index:2;
+  }
+  .quote{
+    font-family:'Cormorant Garamond',serif;
+    font-size:62px;line-height:1.18;font-weight:500;font-style:italic;
+    text-align:center;color:#f6efe2;
+    max-width:900px;letter-spacing:-0.005em;
+    position:relative;z-index:2;
+  }
+  .quote strong{font-style:normal;color:#f0cd92;font-weight:600}
+  .author{
+    margin-top:60px;font-size:14px;letter-spacing:.32em;text-transform:uppercase;
+    color:#d4af72;font-weight:600;position:relative;z-index:2;
+  }
+  .footer{
+    position:absolute;bottom:60px;left:0;right:0;
+    text-align:center;z-index:2;
+  }
+  .footer-name{
+    font-family:'Cormorant Garamond',serif;font-size:36px;color:#f0cd92;font-weight:600;letter-spacing:-0.01em;
+    margin-bottom:8px;
+  }
+  .footer-info{font-size:16px;color:#a9a193;letter-spacing:.18em;text-transform:uppercase}
+  .footer-info strong{color:#f6efe2;font-weight:600}
+</style>
+</head>
+<body>
+<div class="ad">
+  <div class="quote-mark">"</div>
+  <div class="quote">
+    Você não está vivendo a sua história.<br/>
+    Está repetindo a <strong>história da sua família</strong>.
+  </div>
+  <div class="author">A descoberta que muda tudo</div>
+
+  <div class="footer">
+    <div class="footer-name">Heranças Invisíveis</div>
+    <div class="footer-info"><strong>20 / 05 / 2026</strong> · Maringá-PR</div>
+  </div>
+</div>
+</body>
+</html>

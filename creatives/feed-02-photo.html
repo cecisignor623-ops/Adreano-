@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Feed 02 — Photo + Overlay (1080x1080)</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#222;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:20px;font-family:'Inter',sans-serif}
+  .ad{
+    width:1080px;height:1080px;
+    position:relative;overflow:hidden;
+    color:#f6efe2;
+  }
+  .photo{
+    position:absolute;inset:0;
+    background-image:url('adreano.jpg');
+    background-size:cover;
+    background-position:center 25%;
+    filter:saturate(0.9) contrast(1.05);
+  }
+  .overlay{
+    position:absolute;inset:0;
+    background:
+      linear-gradient(180deg,rgba(11,10,8,0.4) 0%,rgba(11,10,8,0.1) 35%,rgba(11,10,8,0.85) 75%,rgba(11,10,8,0.98) 100%);
+  }
+  .grain{
+    position:absolute;inset:0;
+    background-image:radial-gradient(circle at 1px 1px,rgba(212,175,114,0.04) 1px,transparent 0);
+    background-size:40px 40px;
+    pointer-events:none;
+  }
+  .border{
+    position:absolute;inset:30px;
+    border:1px solid rgba(212,175,114,0.3);border-radius:14px;pointer-events:none;z-index:2;
+  }
+  .top-badge{
+    position:absolute;top:60px;left:0;right:0;
+    text-align:center;z-index:3;
+  }
+  .top-badge span{
+    display:inline-block;
+    font-size:16px;letter-spacing:.28em;text-transform:uppercase;
+    color:#d4af72;font-weight:500;
+    padding:12px 28px;border-radius:99px;
+    background:rgba(11,10,8,0.7);
+    border:1px solid rgba(212,175,114,0.4);
+    backdrop-filter:blur(6px);
+  }
+  .bottom{
+    position:absolute;bottom:90px;left:60px;right:60px;
+    z-index:3;text-align:center;
+  }
+  .pretitle-bottom{
+    font-size:14px;letter-spacing:.3em;text-transform:uppercase;
+    color:#d4af72;font-weight:600;margin-bottom:18px;
+  }
+  h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:64px;line-height:1.12;font-weight:600;
+    color:#f6efe2;letter-spacing:-0.01em;
+    max-width:900px;margin:0 auto 24px;
+  }
+  h1 em{font-style:italic;color:#f0cd92;font-weight:500}
+  .speaker{
+    font-size:20px;color:#e9e1d0;font-weight:500;
+    margin-top:24px;display:flex;align-items:center;justify-content:center;gap:16px;
+  }
+  .speaker .line{width:40px;height:1px;background:#9d7d49}
+  .speaker strong{color:#f0cd92;font-weight:600;letter-spacing:0.05em}
+  .info-strip{
+    margin-top:30px;font-size:16px;letter-spacing:.18em;text-transform:uppercase;
+    color:#a9a193;
+  }
+  .info-strip strong{color:#f6efe2}
+</style>
+</head>
+<body>
+<div class="ad">
+  <div class="photo"></div>
+  <div class="overlay"></div>
+  <div class="grain"></div>
+  <div class="border"></div>
+
+  <div class="top-badge">
+    <span>20 de Maio · Maringá-PR</span>
+  </div>
+
+  <div class="bottom">
+    <div class="pretitle-bottom">Evento Presencial</div>
+    <h1>Quebre os <em>padrões familiares</em><br/>que controlam sua vida</h1>
+    <div class="speaker">
+      <span class="line"></span>
+      Com <strong>Adreano Vitor de Lima</strong>
+      <span class="line"></span>
+    </div>
+    <div class="info-strip"><strong>45 vagas</strong> · A partir de 12x R$ 11,04</div>
+  </div>
+</div>
+</body>
+</html>
