@@ -45,3 +45,4 @@ logs/
 *.audience.csv
 *.contacts.csv
 data/private/
+node_modules/
