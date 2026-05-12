@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1a1410"/>
+      <stop offset="1" stop-color="#0b0a08"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f0cd92"/>
+      <stop offset="1" stop-color="#9d7d49"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="url(#bg)"/>
+  <rect x="2.5" y="2.5" width="59" height="59" rx="10" fill="none" stroke="#d4af72" stroke-opacity="0.35" stroke-width="1"/>
+  <text x="32" y="44" font-family="Georgia, 'Cormorant Garamond', serif" font-size="36" font-weight="700" text-anchor="middle" fill="url(#gold)" font-style="italic">HI</text>
+</svg>
