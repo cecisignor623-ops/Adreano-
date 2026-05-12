@@ -364,6 +364,38 @@
   /* === ANIMATION === */
   .fade-in{opacity:0;transform:translateY(24px);transition:opacity .8s ease, transform .8s ease}
   .fade-in.visible{opacity:1;transform:translateY(0)}
+
+  /* === WHATSAPP FAB === */
+  .whatsapp-fab{
+    position:fixed;bottom:24px;right:24px;z-index:99;
+    background:#25D366;color:#fff !important;text-decoration:none;
+    padding:14px 22px;border-radius:99px;
+    display:flex;align-items:center;gap:12px;
+    font-family:'Inter',sans-serif;font-weight:600;font-size:.95rem;letter-spacing:.01em;
+    box-shadow:0 8px 24px rgba(37,211,102,0.4), 0 0 0 0 rgba(37,211,102,0.7);
+    animation:wppPulse 2.4s infinite;
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .whatsapp-fab:hover{transform:scale(1.05);box-shadow:0 12px 30px rgba(37,211,102,0.55)}
+  .whatsapp-fab svg{flex-shrink:0;width:24px;height:24px}
+  .whatsapp-fab .lbl{white-space:nowrap}
+
+  @keyframes wppPulse{
+    0%{box-shadow:0 8px 24px rgba(37,211,102,0.4), 0 0 0 0 rgba(37,211,102,0.55)}
+    70%{box-shadow:0 8px 24px rgba(37,211,102,0.4), 0 0 0 22px rgba(37,211,102,0)}
+    100%{box-shadow:0 8px 24px rgba(37,211,102,0.4), 0 0 0 0 rgba(37,211,102,0)}
+  }
+
+  /* Inline WhatsApp link styling (números clicáveis no corpo) */
+  a.wpp-inline{color:inherit;text-decoration:none;border-bottom:1px dotted currentColor;transition:color .2s ease}
+  a.wpp-inline:hover{color:#25D366}
+
+  /* No mobile o sticky-cta ocupa o fundo — sobe o FAB pra cima dele */
+  @media(max-width:780px){
+    .whatsapp-fab{bottom:96px;right:16px;padding:12px 16px;font-size:.85rem}
+    .whatsapp-fab .lbl{display:none}
+    .whatsapp-fab svg{width:26px;height:26px}
+  }
 </style>
 
 <!-- Meta Pixel Code -->
@@ -639,7 +671,7 @@ fbq('track', 'PageView');
       <div class="guarantee-seal" style="font-size:.78rem">INSCRIÇÃO<br/>SEGURA<br/>SYMPLA</div>
       <div>
         <h3>Compra protegida pela maior plataforma de eventos do Brasil</h3>
-        <p>Sua inscrição é processada e protegida pelo <strong style="color:#cbeed8">Sympla</strong>, com certificado de segurança e direito ao reembolso conforme política da plataforma. Em caso de dúvidas, fale diretamente com o produtor: <strong style="color:var(--cream)">(11) 98101-0102</strong>.</p>
+        <p>Sua inscrição é processada e protegida pelo <strong style="color:#cbeed8">Sympla</strong>, com certificado de segurança e direito ao reembolso conforme política da plataforma. Em caso de dúvidas, fale diretamente com o produtor pelo WhatsApp: <a href="https://wa.me/5511981010102?text=Ol%C3%A1%20Adreano%21%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20evento%20Heran%C3%A7as%20Invis%C3%ADveis." class="wpp-inline" target="_blank" rel="noopener"><strong style="color:var(--cream)">📱 (11) 98101-0102</strong></a>.</p>
       </div>
     </div>
   </div>
@@ -680,7 +712,7 @@ fbq('track', 'PageView');
       </div>
       <div class="faq-item">
         <div class="faq-q">Quem é o palestrante?</div>
-        <div class="faq-a"><strong>Adreano Vitor de Lima</strong>, especialista em padrões familiares e dinâmicas geracionais. Para falar diretamente com a produção: <strong>(11) 98101-0102</strong>.</div>
+        <div class="faq-a"><strong>Adreano Vitor de Lima</strong>, especialista em padrões familiares e dinâmicas geracionais. Para falar diretamente com a produção pelo WhatsApp: <a href="https://wa.me/5511981010102?text=Ol%C3%A1%20Adreano%21%20Vi%20sua%20p%C3%A1gina%20do%20evento%20Heran%C3%A7as%20Invis%C3%ADveis%20e%20gostaria%20de%20conversar." class="wpp-inline" target="_blank" rel="noopener"><strong style="color:var(--cream)">📱 (11) 98101-0102</strong></a>.</div>
       </div>
     </div>
   </div>
@@ -712,6 +744,20 @@ fbq('track', 'PageView');
     GARANTIR VAGA · 12X R$ 11,04 →
   </a>
 </div>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a
+  href="https://wa.me/5511981010102?text=Ol%C3%A1%20Adreano%21%20Vi%20sua%20p%C3%A1gina%20do%20evento%20Heran%C3%A7as%20Invis%C3%ADveis%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida."
+  class="whatsapp-fab"
+  target="_blank"
+  rel="noopener"
+  aria-label="Falar com Adreano pelo WhatsApp"
+>
+  <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+    <path d="M16 .396C7.16.396 0 7.557 0 16.396c0 2.836.74 5.6 2.15 8.043L0 31.604l7.328-2.115a15.872 15.872 0 008.672 2.578c8.84 0 16-7.16 16-16S24.84.396 16 .396zm0 29.105c-2.69 0-5.32-.788-7.56-2.27l-.54-.32-4.355 1.258 1.296-4.247-.354-.564a13.34 13.34 0 01-2.094-7.156c0-7.426 6.04-13.466 13.466-13.466 7.422 0 13.466 6.04 13.466 13.466 0 7.428-6.044 13.464-13.466 13.464zm7.62-10.083c-.422-.21-2.475-1.215-2.86-1.355-.385-.14-.665-.21-.945.21-.28.418-1.082 1.356-1.327 1.636-.245.28-.488.314-.91.105-.42-.21-1.78-.656-3.39-2.097-1.255-1.118-2.1-2.5-2.347-2.92-.245-.42-.025-.65.184-.86.19-.187.42-.488.63-.732.21-.245.28-.42.42-.7.14-.28.07-.524-.035-.733-.105-.21-.945-2.28-1.295-3.118-.34-.83-.69-.717-.945-.73-.245-.014-.525-.014-.806-.014a1.546 1.546 0 00-1.117.525c-.385.42-1.47 1.43-1.47 3.484s1.505 4.04 1.715 4.32c.21.28 2.96 4.523 7.176 6.337 2.508 1.082 3.487 1.176 4.74.987.762-.116 2.348-.96 2.68-1.89.33-.928.33-1.726.232-1.89-.105-.176-.385-.28-.806-.488z"/>
+  </svg>
+  <span class="lbl">Falar com Adreano</span>
+</a>
 
 <script>
   // Year
