@@ -44,5 +44,5 @@ logs/
 # ===== Dados sensíveis de campanha (audiências, listas) =====
 *.audience.csv
 *.contacts.csv
-data/private/
+data/
 node_modules/
