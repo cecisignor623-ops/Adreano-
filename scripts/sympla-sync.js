@@ -20,7 +20,8 @@
 //   SYMPLA_EVENT_ID = 3372889 (Heranças Invisíveis)
 // -----------------------------------------------------------------------------
 
-require('dotenv').config({ path: __dirname + '/../.env' });
+// dotenv carrega .env localmente; em GitHub Actions vem via secrets
+try { require('dotenv').config({ path: __dirname + '/../.env' }); } catch (e) {}
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
@@ -61,9 +62,15 @@ function loadProcessed() {
 }
 
 function saveProcessed(processed) {
-  const dir = path.dirname(PROCESSED_FILE);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(PROCESSED_FILE, JSON.stringify(processed, null, 2));
+  try {
+    const dir = path.dirname(PROCESSED_FILE);
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(PROCESSED_FILE, JSON.stringify(processed, null, 2));
+  } catch (e) {
+    // GitHub Actions: filesystem efêmero — não bloqueia se não conseguir salvar.
+    // Meta dedupe via event_id (sympla-<order_id>) garante que reprocessar é seguro.
+    console.warn('Aviso: não foi possível salvar processed_orders.json (' + e.message + '). Meta dedupa por event_id.');
+  }
 }
 
 async function fetchSymplaOrders() {
