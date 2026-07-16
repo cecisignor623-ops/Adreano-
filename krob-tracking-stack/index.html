@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Neuroarquitetura Empresarial: 2 dias de imersão para empresários descobrirem seu perfil de liderança, desenvolverem tomada de decisão e construírem equipes de alta performance. Mauá-SP, 22 e 23 de agosto." />
+<meta name="theme-color" content="#0b0a08" />
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="assets/favicon-16.png" type="image/png" sizes="16x16" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png" />
+<link rel="manifest" href="assets/site.webmanifest" />
+
+<meta property="og:title" content="Neuroarquitetura Empresarial — Imersão em Liderança · 22 e 23/08 · Mauá-SP" />
+<meta property="og:description" content="Descubra seu verdadeiro perfil de liderança e aprenda a selecionar, desenvolver e liderar pessoas com método. 2 dias presenciais. Apenas 20 vagas." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="assets/images/adreano.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<title>Neuroarquitetura Empresarial — Imersão em Liderança · 22 e 23/08 · Mauá-SP</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#0b0a08;
+    --bg-soft:#13110d;
+    --card:#1a1612;
+    --line:rgba(212,175,114,0.18);
+    --gold:#d4af72;
+    --gold-bright:#f0cd92;
+    --gold-dark:#9d7d49;
+    --cream:#f6efe2;
+    --text:#e9e1d0;
+    --muted:#a9a193;
+    --danger:#ff6b6b;
+    --green:#7bc69a;
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.65;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.15;letter-spacing:-0.01em;color:var(--cream);font-weight:600}
+  h1{font-size:clamp(2.2rem,5.5vw,4.4rem)}
+  h2{font-size:clamp(1.9rem,4vw,3.2rem)}
+  h3{font-size:clamp(1.4rem,2.4vw,2rem)}
+  p{color:var(--text);font-size:1.05rem}
+  a{color:inherit;text-decoration:none}
+  .container{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .gold{color:var(--gold-bright)}
+  .underline{position:relative;display:inline-block}
+  .underline::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+  .small{font-size:.92rem;color:var(--muted)}
+
+  /* === TOP BAR === */
+  .topbar{
+    background:linear-gradient(90deg,#1a1410,#2a1f15,#1a1410);
+    border-bottom:1px solid var(--line);
+    text-align:center;padding:10px 16px;
+    font-size:.88rem;color:var(--gold-bright);
+    font-weight:500;letter-spacing:.02em;
+  }
+  .topbar strong{color:var(--cream)}
+
+  /* === HERO === */
+  .hero{
+    position:relative;
+    padding:80px 0 90px;
+    background:
+      radial-gradient(ellipse at 20% 0%,rgba(212,175,114,0.12),transparent 60%),
+      radial-gradient(ellipse at 80% 100%,rgba(212,175,114,0.08),transparent 60%),
+      var(--bg);
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background-image:
+      radial-gradient(circle at 1px 1px,rgba(212,175,114,0.06) 1px,transparent 0);
+    background-size:40px 40px;
+    pointer-events:none;
+  }
+  .hero-inner{position:relative;text-align:center;max-width:920px;margin:0 auto}
+  .pretitle{
+    display:inline-block;padding:8px 20px;border:1px solid var(--line);
+    border-radius:99px;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--gold);margin-bottom:28px;font-weight:500;
+    background:rgba(212,175,114,0.04);
+  }
+  .hero h1{margin-bottom:24px}
+  .hero h1 em{font-style:italic;color:var(--gold-bright);font-weight:500}
+  .hero-sub{font-size:clamp(1.05rem,1.6vw,1.3rem);color:var(--muted);max-width:720px;margin:0 auto 40px;font-weight:300}
+  .hero-cta-wrap{display:flex;flex-direction:column;align-items:center;gap:16px}
+
+  /* CTA BUTTON */
+  .cta{
+    display:inline-block;padding:20px 44px;border-radius:99px;
+    background:linear-gradient(135deg,var(--gold-bright),var(--gold-dark));
+    color:#1a1410;font-weight:700;font-size:1.05rem;
+    letter-spacing:.02em;cursor:pointer;border:none;
+    box-shadow:0 12px 40px rgba(212,175,114,0.25),inset 0 1px 0 rgba(255,255,255,0.3);
+    transition:transform .25s ease,box-shadow .25s ease;
+    position:relative;overflow:hidden;
+    text-transform:uppercase;
+  }
+  .cta:hover{transform:translateY(-3px);box-shadow:0 20px 50px rgba(212,175,114,0.4)}
+  .cta::after{
+    content:"";position:absolute;top:0;left:-100%;width:100%;height:100%;
+    background:linear-gradient(90deg,transparent,rgba(255,255,255,0.4),transparent);
+    transition:left .6s;
+  }
+  .cta:hover::after{left:100%}
+  .cta-mini{font-size:.85rem;color:var(--muted)}
+  .cta-mini span{color:var(--gold-bright)}
+
+  /* === SECTION BASE === */
+  section{padding:90px 0;position:relative}
+  .section-head{text-align:center;max-width:780px;margin:0 auto 60px}
+  .section-head .pretitle{margin-bottom:20px}
+  .section-head h2{margin-bottom:20px}
+  .section-head p{color:var(--muted);font-size:1.1rem}
+
+  /* === PAIN === */
+  .pain{background:linear-gradient(180deg,var(--bg),#0e0c09)}
+  .pain-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:50px}
+  .pain-item{
+    background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:28px;position:relative;transition:transform .3s ease, border-color .3s ease;
+  }
+  .pain-item:hover{transform:translateY(-4px);border-color:rgba(212,175,114,0.4)}
+  .pain-item .icon{
+    width:48px;height:48px;border-radius:12px;
+    background:rgba(212,175,114,0.1);border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:18px;font-size:1.4rem;
+  }
+  .pain-item h3{font-size:1.3rem;margin-bottom:10px;color:var(--cream)}
+  .pain-item p{color:var(--muted);font-size:.98rem}
+
+  /* === REVELATION === */
+  .revelation{
+    background:
+      radial-gradient(ellipse at 50% 0%,rgba(212,175,114,0.1),transparent 60%),
+      var(--bg-soft);
+    text-align:center;
+  }
+  .revelation .quote{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(1.6rem,3.2vw,2.6rem);
+    font-style:italic;color:var(--cream);
+    max-width:880px;margin:0 auto 36px;line-height:1.3;
+  }
+  .revelation .quote::before,.revelation .quote::after{
+    content:'"';color:var(--gold);font-size:3rem;line-height:0;vertical-align:-0.4em;
+  }
+  .revelation .author{color:var(--gold);font-size:.95rem;letter-spacing:.15em;text-transform:uppercase}
+
+  /* === BENEFITS / WHAT YOU GET === */
+  .benefits-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}
+  .benefit{
+    background:linear-gradient(180deg,var(--card),#15110d);
+    border:1px solid var(--line);border-radius:18px;padding:36px 30px;
+    position:relative;transition:all .3s ease;
+  }
+  .benefit:hover{border-color:var(--gold-dark);transform:translateY(-4px)}
+  .benefit .num{
+    position:absolute;top:-18px;left:30px;
+    width:42px;height:42px;border-radius:50%;
+    background:linear-gradient(135deg,var(--gold-bright),var(--gold-dark));
+    color:#1a1410;font-weight:800;display:flex;align-items:center;justify-content:center;
+    font-size:1.05rem;box-shadow:0 6px 20px rgba(212,175,114,0.3);
+  }
+  .benefit h3{font-size:1.4rem;margin-bottom:12px;margin-top:8px}
+  .benefit p{color:var(--muted);font-size:.98rem}
+
+  /* === FOR WHO === */
+  .forwho{background:var(--bg-soft)}
+  .forwho-cols{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:40px}
+  .forwho-card{
+    border-radius:18px;padding:36px 30px;border:1px solid var(--line);
+  }
+  .forwho-card.yes{background:linear-gradient(180deg,rgba(123,198,154,0.04),transparent);border-color:rgba(123,198,154,0.25)}
+  .forwho-card.no{background:linear-gradient(180deg,rgba(255,107,107,0.04),transparent);border-color:rgba(255,107,107,0.25)}
+  .forwho-card h3{margin-bottom:20px;display:flex;align-items:center;gap:10px}
+  .forwho-card.yes h3{color:#a8e0bf}
+  .forwho-card.no h3{color:#ffb0b0}
+  .forwho-card ul{list-style:none}
+  .forwho-card li{padding:10px 0;color:var(--text);display:flex;gap:12px;align-items:flex-start;font-size:1rem;border-bottom:1px solid var(--line)}
+  .forwho-card li:last-child{border-bottom:none}
+  .forwho-card li::before{flex-shrink:0;font-size:1.1rem;line-height:1.4}
+  .forwho-card.yes li::before{content:"✓";color:var(--green);font-weight:800}
+  .forwho-card.no li::before{content:"✕";color:var(--danger);font-weight:800}
+  @media(max-width:780px){.forwho-cols{grid-template-columns:1fr}}
+
+  /* === OFFER === */
+  .offer{background:radial-gradient(ellipse at 50% 50%,rgba(212,175,114,0.08),transparent 70%),var(--bg)}
+  .offer-card{
+    max-width:680px;margin:40px auto 0;
+    background:linear-gradient(180deg,#1c1813,#15110c);
+    border:1px solid var(--gold-dark);border-radius:24px;
+    padding:50px 40px;text-align:center;position:relative;overflow:hidden;
+    box-shadow:0 20px 80px rgba(0,0,0,0.4),inset 0 1px 0 rgba(212,175,114,0.2);
+  }
+  .offer-card::before{
+    content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);
+    width:60%;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  }
+  .offer-badge{
+    display:inline-block;padding:6px 18px;border-radius:99px;
+    background:rgba(255,107,107,0.12);color:#ffb3b3;border:1px solid rgba(255,107,107,0.3);
+    font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;font-weight:600;margin-bottom:20px;
+  }
+  .price{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,7vw,5rem);font-weight:600;color:var(--cream);line-height:1}
+  .price small{font-size:1.1rem;color:var(--gold);font-family:'Inter',sans-serif;font-weight:500;display:block;margin-top:6px;letter-spacing:.05em}
+  .price-info{color:var(--muted);margin:20px 0 30px;font-size:.95rem}
+  .price-info strong{color:var(--cream)}
+
+  /* === COUNTDOWN === */
+  .timer{display:flex;justify-content:center;gap:14px;margin:24px 0}
+  .timer-box{
+    background:rgba(212,175,114,0.08);border:1px solid var(--line);border-radius:12px;
+    padding:14px 18px;min-width:72px;text-align:center;
+  }
+  .timer-num{font-size:1.8rem;font-family:'Cormorant Garamond',serif;color:var(--gold-bright);font-weight:700;line-height:1}
+  .timer-lbl{font-size:.7rem;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-top:4px}
+
+  /* === GUARANTEE === */
+  .guarantee{
+    display:flex;align-items:center;gap:32px;
+    background:linear-gradient(135deg,rgba(123,198,154,0.06),rgba(212,175,114,0.04));
+    border:1px solid rgba(123,198,154,0.2);border-radius:20px;padding:36px;
+    max-width:880px;margin:60px auto 0;
+  }
+  .guarantee-seal{
+    flex-shrink:0;width:120px;height:120px;border-radius:50%;
+    background:radial-gradient(circle,#1f3a2a,#0e1a13);
+    border:2px solid rgba(123,198,154,0.4);
+    display:flex;align-items:center;justify-content:center;
+    color:#a8e0bf;font-family:'Cormorant Garamond',serif;font-style:italic;
+    text-align:center;font-size:.85rem;line-height:1.1;font-weight:600;
+    box-shadow:0 8px 30px rgba(123,198,154,0.15);
+  }
+  .guarantee h3{color:#cbeed8;margin-bottom:8px}
+  .guarantee p{color:var(--muted);font-size:.98rem}
+  @media(max-width:680px){.guarantee{flex-direction:column;text-align:center;padding:30px 24px}}
+
+  /* === TESTIMONIALS === */
+  .testimonials{background:var(--bg-soft)}
+  .testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px}
+  .testi{
+    background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:30px;position:relative;
+  }
+  .testi::before{
+    content:"❝";position:absolute;top:14px;right:22px;
+    font-size:3.5rem;color:var(--gold-dark);opacity:.3;font-family:serif;line-height:1;
+  }
+  .testi p{color:var(--text);font-style:italic;margin-bottom:18px;font-size:1rem;line-height:1.7}
+
+  /* === ABOUT === */
+  .about-block{
+    background:var(--card);border:1px solid var(--line);
+    border-radius:24px;padding:50px;
+    display:grid;grid-template-columns:1fr 1.6fr;gap:40px;align-items:center;
+  }
+  .about-photo{
+    aspect-ratio:4/5;border-radius:20px;
+    background:linear-gradient(135deg,#2a1f15,#1a1410);
+    border:1px solid var(--line);
+    position:relative;overflow:hidden;
+  }
+  .about-photo img{
+    width:100%;height:100%;object-fit:cover;display:block;
+    filter:saturate(1.05) contrast(1.02);
+  }
+  .about-photo::after{
+    content:"";position:absolute;inset:8px;border:1px solid rgba(212,175,114,0.25);border-radius:14px;pointer-events:none;z-index:1;
+  }
+  .about h3{margin-bottom:16px}
+  .about p{color:var(--text);margin-bottom:14px;font-size:1.02rem}
+  .about p strong{color:var(--gold-bright)}
+  @media(max-width:780px){.about-block{grid-template-columns:1fr;padding:30px 24px}}
+
+  .creds-strip{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .cred-tag{
+    display:inline-block;padding:5px 14px;border-radius:99px;
+    background:rgba(212,175,114,0.08);border:1px solid var(--line);
+    font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--gold);font-weight:600;
+  }
+
+  /* === BOOKS === */
+  .books{display:flex;flex-direction:column;gap:10px;margin-top:18px}
+  .book-row{
+    display:flex;align-items:center;gap:12px;
+    background:rgba(212,175,114,0.05);border:1px solid var(--line);
+    border-radius:10px;padding:12px 16px;
+  }
+  .book-row span{font-size:1.3rem}
+  .book-row p{font-size:.9rem;color:var(--muted);margin:0}
+  .book-row strong{color:var(--cream);font-size:.92rem}
+
+  /* === FAQ === */
+  .faq{max-width:820px;margin:0 auto}
+  .faq-item{
+    background:var(--card);border:1px solid var(--line);border-radius:14px;
+    margin-bottom:14px;overflow:hidden;transition:border-color .3s ease;
+  }
+  .faq-item:hover{border-color:rgba(212,175,114,0.3)}
+  .faq-q{
+    padding:22px 26px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;
+    color:var(--cream);font-weight:600;font-size:1.05rem;user-select:none;
+  }
+  .faq-q::after{content:"+";color:var(--gold);font-size:1.6rem;transition:transform .3s ease;line-height:1}
+  .faq-item.open .faq-q::after{transform:rotate(45deg)}
+  .faq-a{
+    max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;
+    padding:0 26px;color:var(--muted);font-size:1rem;line-height:1.75;
+  }
+  .faq-item.open .faq-a{padding:0 26px 24px;max-height:600px}
+
+  /* === FINAL CTA === */
+  .final{
+    background:
+      radial-gradient(ellipse at 50% 50%,rgba(212,175,114,0.12),transparent 70%),
+      linear-gradient(180deg,var(--bg-soft),var(--bg));
+    text-align:center;padding:120px 0;
+  }
+  .final h2{margin-bottom:20px;max-width:780px;margin-left:auto;margin-right:auto}
+  .final p{color:var(--muted);font-size:1.15rem;max-width:640px;margin:0 auto 36px}
+
+  /* === FOOTER === */
+  footer{
+    border-top:1px solid var(--line);padding:40px 0 30px;
+    text-align:center;color:var(--muted);font-size:.85rem;
+    background:var(--bg-soft);
+  }
+  footer p{color:var(--muted);font-size:.85rem;margin-bottom:8px}
+  footer a{color:var(--gold);text-decoration:underline}
+
+  /* === STICKY CTA MOBILE === */
+  .sticky-cta{
+    display:none;position:fixed;bottom:0;left:0;right:0;
+    background:linear-gradient(180deg,rgba(11,10,8,0.92),var(--bg));
+    backdrop-filter:blur(12px);padding:14px 16px;
+    border-top:1px solid var(--line);z-index:100;
+    box-shadow:0 -10px 40px rgba(0,0,0,0.6);
+  }
+  .sticky-cta .cta{width:100%;padding:16px;font-size:.95rem}
+  @media(max-width:780px){
+    .sticky-cta{display:block}
+    body{padding-bottom:84px}
+    section{padding:70px 0}
+    .about-block{padding:30px 24px}
+  }
+
+  /* === ANIMATION === */
+  .fade-in{opacity:0;transform:translateY(24px);transition:opacity .8s ease, transform .8s ease}
+  .fade-in.visible{opacity:1;transform:translateY(0)}
+
+  /* === WHATSAPP FAB === */
+  .whatsapp-fab{
+    position:fixed;bottom:24px;right:24px;z-index:99;
+    background:#25D366;color:#fff !important;text-decoration:none;
+    padding:14px 22px;border-radius:99px;
+    display:flex;align-items:center;gap:12px;
+    font-family:'Inter',sans-serif;font-weight:600;font-size:.95rem;letter-spacing:.01em;
+    box-shadow:0 8px 24px rgba(37,211,102,0.4), 0 0 0 0 rgba(37,211,102,0.7);
+    animation:wppPulse 2.4s infinite;
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .whatsapp-fab:hover{transform:scale(1.05);box-shadow:0 12px 30px rgba(37,211,102,0.55)}
+  .whatsapp-fab svg{flex-shrink:0;width:24px;height:24px}
+  .whatsapp-fab .lbl{white-space:nowrap}
+
+  @keyframes wppPulse{
+    0%{box-shadow:0 8px 24px rgba(37,211,102,0.4), 0 0 0 0 rgba(37,211,102,0.55)}
+    70%{box-shadow:0 8px 24px rgba(37,211,102,0.4), 0 0 0 22px rgba(37,211,102,0)}
+    100%{box-shadow:0 8px 24px rgba(37,211,102,0.4), 0 0 0 0 rgba(37,211,102,0)}
+  }
+
+  a.wpp-inline{color:inherit;text-decoration:none;border-bottom:1px dotted currentColor;transition:color .2s ease}
+  a.wpp-inline:hover{color:#25D366}
+
+  @media(max-width:780px){
+    .whatsapp-fab{bottom:96px;right:16px;padding:12px 16px;font-size:.85rem}
+    .whatsapp-fab .lbl{display:none}
+    .whatsapp-fab svg{width:26px;height:26px}
+  }
+</style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '412518964606895');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=412518964606895&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+
+</head>
+<body>
+
+<div class="topbar">
+  ⚡ <strong>22 e 23 de Agosto · Mauá-SP</strong> · Apenas 20 vagas · R$ 500 · 8h às 18h
+</div>
+
+<!-- ========= HERO ========= -->
+<header class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <span class="pretitle">Neuroarquitetura Empresarial · Imersão Presencial</span>
+      <h1>Sua empresa só vai até onde<br/><em>a sua liderança permitir.</em></h1>
+      <p class="hero-sub">
+        Em 2 dias intensivos você vai fazer o <strong style="color:var(--cream)">diagnóstico completo da sua estrutura mental como líder</strong> — identificar seus pontos fortes, suas limitações invisíveis e o método para selecionar, desenvolver e promover pessoas com critério e segurança.
+      </p>
+      <div class="hero-cta-wrap">
+        <a href="https://www.sympla.com.br/evento/diagnOstico-de-estrutura-mental-do-empresArio-e-lIder-de-alta-performance/3504059" class="cta" target="_blank" rel="noopener">
+          Quero garantir minha vaga →
+        </a>
+        <p class="cta-mini">🔒 Inscrição via Sympla · Apenas <span>20 vagas</span> · <span>R$ 500</span></p>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:48px">
+        <div style="display:flex;align-items:center;gap:10px;background:rgba(212,175,114,0.06);border:1px solid var(--line);border-radius:99px;padding:10px 20px;font-size:.92rem;color:var(--cream)">
+          <span style="color:var(--gold)">📅</span> 22 e 23 de Agosto · 8h às 18h
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;background:rgba(212,175,114,0.06);border:1px solid var(--line);border-radius:99px;padding:10px 20px;font-size:.92rem;color:var(--cream)">
+          <span style="color:var(--gold)">📍</span> Mauá · São Paulo
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;background:rgba(212,175,114,0.06);border:1px solid var(--line);border-radius:99px;padding:10px 20px;font-size:.92rem;color:var(--cream)">
+          <span style="color:var(--gold)">🎟️</span> Turma de apenas 20 empresários
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ========= PAIN ========= -->
+<section class="pain">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="pretitle">Reconhece algum desses cenários?</span>
+      <h2>O maior risco para o crescimento da sua empresa não é o mercado. É a liderança sem método.</h2>
+      <p>Todo empresário aprende a vender, a operar, a crescer. Mas poucos param para entender como <strong style="color:var(--gold-bright)">a própria estrutura mental</strong> está limitando as decisões, a equipe e os resultados.</p>
+    </div>
+
+    <div class="pain-list">
+      <div class="pain-item fade-in">
+        <div class="icon">🎭</div>
+        <h3>Contrata pela impressão, erra pelo perfil</h3>
+        <p>A entrevista vai bem, a pessoa parece ótima — e em 3 meses você percebe que não é o que a empresa precisava. Cada erro custa entre 3x e 15x o salário do profissional.</p>
+      </div>
+      <div class="pain-item fade-in">
+        <div class="icon">🪞</div>
+        <h3>Não sabe qual líder você é de verdade</h3>
+        <p>Você lidera no feeling. Às vezes funciona, às vezes não — e você não sabe exatamente por quê. Sem consciência do seu próprio perfil, as decisões dependem do humor do dia.</p>
+      </div>
+      <div class="pain-item fade-in">
+        <div class="icon">📉</div>
+        <h3>Pontos fortes usados no lugar errado</h3>
+        <p>O que te trouxe até aqui pode ser exatamente o que está te impedindo de escalar. Sem clareza dos seus padrões, você repete estratégias que funcionaram antes — e que já não funcionam mais.</p>
+      </div>
+      <div class="pain-item fade-in">
+        <div class="icon">🔄</div>
+        <h3>Promove quem não devia — e perde quem devia</h3>
+        <p>Promover sem critério gera liderança fraca dentro da empresa. E perder bons colaboradores por falta de reconhecimento estruturado é um dos maiores drenos invisíveis de resultado.</p>
+      </div>
+      <div class="pain-item fade-in">
+        <div class="icon">👥</div>
+        <h3>Equipe que depende de você para tudo</h3>
+        <p>Você virou o gargalo do próprio negócio. Tudo passa por você. Toda decisão chega até você. Isso não é liderança forte — é ausência de estrutura na equipe.</p>
+      </div>
+      <div class="pain-item fade-in">
+        <div class="icon">🧭</div>
+        <h3>Tomada de decisão lenta e desgastante</h3>
+        <p>Decidir consome mais energia do que deveria. Você sente o peso de cada escolha, duvida, posterga. Isso tem nome: é falta de alinhamento entre perfil, método e contexto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========= REVELATION ========= -->
+<section class="revelation">
+  <div class="container">
+    <p class="quote fade-in">Você não tem um problema de mercado, de produto ou de equipe. Você tem um problema de estrutura mental — e enquanto isso não for diagnosticado, toda solução que você tentar vai ser temporária.</p>
+    <p class="author fade-in">— A raiz que ninguém mostra</p>
+  </div>
+</section>
+
+<!-- ========= BENEFITS ========= -->
+<section>
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="pretitle">O que você vai desenvolver nos 2 dias</span>
+      <h2>Diagnóstico, método e plano de ação — não só conteúdo</h2>
+      <p>A Neuroarquitetura Empresarial combina Neurociências, Psicanálise, PNL e Hipnoterapia num processo prático que vai muito além de qualquer treinamento de liderança convencional.</p>
+    </div>
+
+    <div class="benefits-grid">
+      <div class="benefit fade-in">
+        <div class="num">1</div>
+        <h3>Descubra seu verdadeiro perfil de liderança</h3>
+        <p>Identifique com precisão como você pensa, decide e reage sob pressão — e entenda como esse perfil impacta sua equipe, suas contratações e seus resultados hoje.</p>
+      </div>
+      <div class="benefit fade-in">
+        <div class="num">2</div>
+        <h3>Mapeie seus pontos fortes e limitações reais</h3>
+        <p>Pare de operar no escuro. Você vai conhecer exatamente onde sua liderança é forte, onde ela falha — e como usar isso a seu favor em vez de deixar que te sabotem.</p>
+      </div>
+      <div class="benefit fade-in">
+        <div class="num">3</div>
+        <h3>Aprimore sua tomada de decisão</h3>
+        <p>Decisões mais rápidas, mais seguras e com menos desgaste emocional. Você vai aprender a estruturar seu processo decisório com base na sua arquitetura mental.</p>
+      </div>
+      <div class="benefit fade-in">
+        <div class="num">4</div>
+        <h3>Selecione e desenvolva líderes com assertividade</h3>
+        <p>Aprenda a ler o perfil de uma pessoa antes de contratá-la. Critérios concretos para identificar potencial de liderança — e parar de depender da intuição.</p>
+      </div>
+      <div class="benefit fade-in">
+        <div class="num">5</div>
+        <h3>Promova com critérios claros e justos</h3>
+        <p>Chega de promover quem grita mais alto ou trabalha há mais tempo. Você vai sair com um modelo estruturado para reconhecer e promover as pessoas certas.</p>
+      </div>
+      <div class="benefit fade-in">
+        <div class="num">6</div>
+        <h3>Construa uma equipe de alta performance</h3>
+        <p>Uma equipe que pensa, age e resolve — sem precisar de você em cada decisão. Você vai entender como montar esse time com base em perfis complementares ao seu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========= ABOUT ========= -->
+<section style="background:var(--bg-soft)" class="about">
+  <div class="container">
+    <div class="about-block fade-in">
+      <div class="about-photo">
+        <img src="assets/images/adreano.jpg" alt="Adreano Vitor de Lima — Neuroarquitetura Empresarial" loading="lazy" />
+      </div>
+      <div>
+        <span class="pretitle">Quem vai conduzir a imersão</span>
+        <h3 style="margin-top:16px">Adreano Vitor de Lima</h3>
+        <p>Psicoterapeuta com formação em <strong>Terapias Integrativas</strong>, especialista em <strong>Psicanálise, PNL, Hipnoterapia e Neurociências</strong>. Com ampla experiência no atendimento clínico, Adreano também atua como professor, mentor e palestrante focado em ajudar profissionais a melhorarem sua performance como empreendedores e líderes.</p>
+        <p>Seu método combina o rigor técnico das neurociências com a profundidade da psicanálise e a aplicabilidade prática da PNL — traduzindo comportamento humano em estratégias reais de gestão e liderança empresarial.</p>
+        <p style="color:var(--muted);font-size:.95rem;margin-top:4px;font-style:italic">"Quando você entende sua própria estrutura mental, para de gerenciar no escuro."</p>
+        <div class="creds-strip">
+          <span class="cred-tag">Psicoterapeuta</span>
+          <span class="cred-tag">Psicanalista</span>
+          <span class="cred-tag">PNL</span>
+          <span class="cred-tag">Hipnoterapeuta</span>
+          <span class="cred-tag">Neurociências</span>
+        </div>
+        <div class="books">
+          <div class="book-row">
+            <span>📖</span>
+            <div>
+              <strong>Dogmas Invisíveis</strong>
+              <p>Crenças Limitantes Religiosas e seus Efeitos Psicológicos</p>
+            </div>
+          </div>
+          <div class="book-row">
+            <span>📖</span>
+            <div>
+              <strong>Desperte da Matrix</strong>
+              <p>Livro de autodesenvolvimento para quebrar padrões mentais limitantes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========= FOR WHO ========= -->
+<section class="forwho">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="pretitle">Honestidade total</span>
+      <h2>Essa imersão é (e não é) para você</h2>
+      <p>Prefiro te falar a verdade agora do que te vender uma vaga que não vai te servir.</p>
+    </div>
+
+    <div class="forwho-cols">
+      <div class="forwho-card yes fade-in">
+        <h3>É para você se…</h3>
+        <ul>
+          <li>Você é empresário ou líder e quer entender de verdade como sua mente toma decisões e impacta sua equipe.</li>
+          <li>Você já errou na contratação e quer um método para não repetir esse ciclo caro.</li>
+          <li>Você sente que sua liderança tem potencial para mais — mas não sabe exatamente o que está limitando.</li>
+          <li>Você quer construir uma equipe que funcione sem depender de você em cada detalhe.</li>
+          <li>Você está disposto(a) a fazer um diagnóstico honesto de si mesmo e agir com base no que descobrir.</li>
+        </ul>
+      </div>
+      <div class="forwho-card no fade-in">
+        <h3>Não é para você se…</h3>
+        <ul>
+          <li>Você acha que o problema da sua empresa é sempre externo — o mercado, a equipe, a economia.</li>
+          <li>Você quer motivação passageira, não transformação estrutural.</li>
+          <li>Você não tem equipe e não tem planos de contratar ou desenvolver pessoas.</li>
+          <li>Você não está disposto(a) a questionar a forma como lidera hoje.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========= TRUTHS ========= -->
+<section class="testimonials">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="pretitle">Reflita por um instante</span>
+      <h2>O que os empresários mais bem-sucedidos sabem — e os outros ignoram</h2>
+    </div>
+
+    <div class="testi-grid">
+      <div class="testi fade-in">
+        <p style="font-style:normal;font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--cream);line-height:1.4;margin-bottom:0">"Você pode ter o melhor produto do mercado… <em style="color:var(--gold-bright)">e afundar por não saber liderar as pessoas que vão entregá-lo</em>."</p>
+      </div>
+      <div class="testi fade-in">
+        <p style="font-style:normal;font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--cream);line-height:1.4;margin-bottom:0">"Contratar pelo currículo e demitir pelo comportamento… <em style="color:var(--gold-bright)">é o ciclo mais caro que um empresário pode manter</em>."</p>
+      </div>
+      <div class="testi fade-in">
+        <p style="font-style:normal;font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--cream);line-height:1.4;margin-bottom:0">"A empresa que você quer construir… <em style="color:var(--gold-bright)">exige o líder que você ainda não se tornou</em>."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========= OFFER ========= -->
+<section class="offer" id="inscricao">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="pretitle">Sua decisão</span>
+      <h2>20 vagas. 2 dias. Uma virada real na sua liderança.</h2>
+      <p>A turma é pequena por escolha — porque o trabalho de diagnóstico exige atenção individual. Quem chega primeiro, garante. Quem hesita, espera a próxima edição.</p>
+    </div>
+
+    <div class="offer-card fade-in">
+      <span class="offer-badge">⚡ Apenas 20 vagas · 22 e 23 de Agosto · Mauá-SP</span>
+
+      <div style="margin:20px 0 8px;color:var(--muted);font-size:.95rem">Investimento total · 2 dias de imersão presencial</div>
+      <div class="price">
+        R$ 500
+        <small>PIX, CARTÃO OU BOLETO · INSCRIÇÃO VIA SYMPLA</small>
+      </div>
+
+      <p class="price-info">Inclui os <strong>2 dias completos</strong> (8h às 18h) · <strong>Mauá-SP</strong> · Confirmação imediata</p>
+
+      <div style="background:rgba(212,175,114,0.06);border:1px solid var(--line);border-radius:14px;padding:20px 24px;margin:24px 0;text-align:left">
+        <div style="font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;font-weight:600">O que está incluído nos 2 dias</div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:.98rem">
+          <div>✦ Diagnóstico completo da sua estrutura mental como líder</div>
+          <div>✦ Mapeamento dos seus pontos fortes e limitações reais</div>
+          <div>✦ Método para identificar e selecionar líderes na contratação</div>
+          <div>✦ Critérios concretos para promoção e desenvolvimento de equipe</div>
+          <div>✦ Técnicas de tomada de decisão baseadas em neurociência</div>
+          <div>✦ Plano de ação personalizado para os próximos 90 dias</div>
+          <div>✦ Turma exclusiva com apenas 20 empresários</div>
+          <div>✦ Condução de Adreano Vitor de Lima (psicoterapeuta, autor e palestrante)</div>
+        </div>
+      </div>
+
+      <div style="margin:24px 0 8px;font-size:.85rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase">⏳ Faltam para o evento começar</div>
+      <div class="timer" id="timer">
+        <div class="timer-box"><div class="timer-num" id="d">00</div><div class="timer-lbl">Dias</div></div>
+        <div class="timer-box"><div class="timer-num" id="h">00</div><div class="timer-lbl">Horas</div></div>
+        <div class="timer-box"><div class="timer-num" id="m">00</div><div class="timer-lbl">Min</div></div>
+        <div class="timer-box"><div class="timer-num" id="s">00</div><div class="timer-lbl">Seg</div></div>
+      </div>
+
+      <a href="https://www.sympla.com.br/evento/diagnOstico-de-estrutura-mental-do-empresArio-e-lIder-de-alta-performance/3504059" class="cta" target="_blank" rel="noopener" style="width:100%;max-width:420px;margin-top:20px">
+        GARANTIR MINHA VAGA AGORA →
+      </a>
+      <p class="cta-mini" style="margin-top:14px">🔒 Inscrição segura via Sympla · Confirmação imediata por e-mail</p>
+    </div>
+
+    <div class="guarantee fade-in">
+      <div class="guarantee-seal" style="font-size:.72rem">APENAS<br/>20<br/>VAGAS</div>
+      <div>
+        <h3>Turma pequena, resultado real</h3>
+        <p>20 vagas porque diagnóstico de estrutura mental não funciona em auditório. Cada participante recebe atenção, feedback direto e sai com um plano personalizado. Dúvidas antes de se inscrever? Fale com a produção: <a href="https://wa.me/5511981010102?text=Ol%C3%A1%20Adreano%21%20Tenho%20uma%20d%C3%BAvida%20sobre%20a%20Neuroarquitetura%20Empresarial." class="wpp-inline" target="_blank" rel="noopener"><strong style="color:var(--cream)">📱 (11) 98101-0102</strong></a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========= FAQ ========= -->
+<section style="background:var(--bg-soft)">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="pretitle">Perguntas frequentes</span>
+      <h2>Suas dúvidas, respondidas com clareza</h2>
+    </div>
+
+    <div class="faq">
+      <div class="faq-item">
+        <div class="faq-q">Quando e onde acontece a imersão?</div>
+        <div class="faq-a">Dias <strong>22 e 23 de agosto de 2026 (sábado e domingo), das 8h às 18h</strong>, em <strong>Mauá-SP</strong>. O endereço exato é enviado por e-mail após a confirmação da inscrição.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Quanto custa e como pago?</div>
+        <div class="faq-a">O investimento é de <strong>R$ 500,00</strong> pelos 2 dias completos. Aceita Pix, cartão de crédito e boleto, tudo processado com segurança pelo Sympla.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">O que é Neuroarquitetura Empresarial?</div>
+        <div class="faq-a">É o método desenvolvido por Adreano que combina Neurociências, Psicanálise, PNL e Hipnoterapia para <strong>mapear e reestruturar a forma como o empresário pensa, decide e lidera</strong>. Não é teoria — é diagnóstico aplicado ao negócio real.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Tenho empresa pequena. Faz sentido para mim?</div>
+        <div class="faq-a">Sim. O tamanho da empresa não determina a necessidade de liderança estruturada — o estágio de crescimento determina. Se você tem equipe (mesmo pequena) ou está prestes a contratar, você vai sair com ferramentas imediatamente aplicáveis.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Já fiz outros treinamentos de liderança. O que é diferente aqui?</div>
+        <div class="faq-a">A maioria dos treinamentos ensina técnicas de gestão. A Neuroarquitetura Empresarial vai antes disso: ela mapeia <strong>sua estrutura mental</strong> — como você processa informação, toma decisões e responde sob pressão — e usa isso como base para desenvolver sua liderança. É personalizado, não genérico.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Por que apenas 20 vagas?</div>
+        <div class="faq-a">Porque diagnóstico de estrutura mental não escala. Com 20 pessoas, o Adreano consegue dar atenção real a cada participante. Não é estratégia de marketing — é respeito pelo processo e pelo seu resultado.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Quem é o Adreano Vitor de Lima?</div>
+        <div class="faq-a"><strong>Adreano Vitor de Lima</strong> é psicoterapeuta, psicanalista, especialista em PNL, Hipnoterapia e Neurociências — professor, mentor, palestrante e autor dos livros <em>Dogmas Invisíveis</em> e <em>Desperte da Matrix</em>. Ele tem ampla experiência no atendimento clínico e no desenvolvimento de líderes e empreendedores. Para falar diretamente: <a href="https://wa.me/5511981010102?text=Ol%C3%A1%20Adreano%21%20Vi%20a%20p%C3%A1gina%20da%20Neuroarquitetura%20Empresarial%20e%20quero%20conversar." class="wpp-inline" target="_blank" rel="noopener"><strong style="color:var(--cream)">📱 (11) 98101-0102</strong></a>.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========= FINAL CTA ========= -->
+<section class="final">
+  <div class="container fade-in">
+    <h2>A empresa que você quer construir exige o líder que você ainda não se tornou.</h2>
+    <p>Você pode continuar gerenciando no feeling, contratando pela intuição e torcendo para a equipe entregar. Ou pode passar 2 dias entendendo de verdade como você pensa, decide e lidera — e sair com um método real para mudar isso. <strong style="color:var(--gold-bright)">20 vagas. Sem reprise.</strong></p>
+    <a href="https://www.sympla.com.br/evento/diagnOstico-de-estrutura-mental-do-empresArio-e-lIder-de-alta-performance/3504059" class="cta" target="_blank" rel="noopener">
+      Quero ser um dos 20 →
+    </a>
+    <p class="cta-mini" style="margin-top:18px">🔒 22 e 23 de Agosto · Mauá-SP · R$ 500 · Inscrição via Sympla</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© <span id="yr"></span> Neuroarquitetura Empresarial · Adreano Vitor de Lima · Todos os direitos reservados</p>
+    <p>Inscrições via <a href="https://www.sympla.com.br/evento/diagnOstico-de-estrutura-mental-do-empresArio-e-lIder-de-alta-performance/3504059" target="_blank" rel="noopener">Sympla</a></p>
+    <p style="margin-top:12px;font-size:.78rem">Este site não é afiliado ao Facebook Inc. ou Meta Platforms. Resultados individuais podem variar.</p>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-cta">
+  <a href="https://www.sympla.com.br/evento/diagnOstico-de-estrutura-mental-do-empresArio-e-lIder-de-alta-performance/3504059" class="cta" target="_blank" rel="noopener">
+    GARANTIR VAGA · 22 E 23/08 →
+  </a>
+</div>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a
+  href="https://wa.me/5511981010102?text=Ol%C3%A1%20Adreano%21%20Vi%20a%20p%C3%A1gina%20da%20Neuroarquitetura%20Empresarial%20e%20quero%20saber%20mais%20sobre%20a%20imers%C3%A3o."
+  class="whatsapp-fab"
+  target="_blank"
+  rel="noopener"
+  aria-label="Falar com Adreano pelo WhatsApp"
+>
+  <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+    <path d="M16 .396C7.16.396 0 7.557 0 16.396c0 2.836.74 5.6 2.15 8.043L0 31.604l7.328-2.115a15.872 15.872 0 008.672 2.578c8.84 0 16-7.16 16-16S24.84.396 16 .396zm0 29.105c-2.69 0-5.32-.788-7.56-2.27l-.54-.32-4.355 1.258 1.296-4.247-.354-.564a13.34 13.34 0 01-2.094-7.156c0-7.426 6.04-13.466 13.466-13.466 7.422 0 13.466 6.04 13.466 13.466 0 7.428-6.044 13.464-13.466 13.464zm7.62-10.083c-.422-.21-2.475-1.215-2.86-1.355-.385-.14-.665-.21-.945.21-.28.418-1.082 1.356-1.327 1.636-.245.28-.488.314-.91.105-.42-.21-1.78-.656-3.39-2.097-1.255-1.118-2.1-2.5-2.347-2.92-.245-.42-.025-.65.184-.86.19-.187.42-.488.63-.732.21-.245.28-.42.42-.7.14-.28.07-.524-.035-.733-.105-.21-.945-2.28-1.295-3.118-.34-.83-.69-.717-.945-.73-.245-.014-.525-.014-.806-.014a1.546 1.546 0 00-1.117.525c-.385.42-1.47 1.43-1.47 3.484s1.505 4.04 1.715 4.32c.21.28 2.96 4.523 7.176 6.337 2.508 1.082 3.487 1.176 4.74.987.762-.116 2.348-.96 2.68-1.89.33-.928.33-1.726.232-1.89-.105-.176-.385-.28-.806-.488z"/>
+  </svg>
+  <span class="lbl">Falar com Adreano</span>
+</a>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  document.querySelectorAll('.faq-item').forEach(item=>{
+    item.querySelector('.faq-q').addEventListener('click',()=>{
+      item.classList.toggle('open');
+    });
+  });
+
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:.12});
+  document.querySelectorAll('.fade-in').forEach(el=>io.observe(el));
+
+  // Countdown: 22/08/2026 às 08:00 (America/Sao_Paulo, UTC-3)
+  (function(){
+    const eventDate = new Date('2026-08-22T08:00:00-03:00').getTime();
+    const pad = n => String(Math.max(0,n)).padStart(2,'0');
+    function tick(){
+      const diff = eventDate - Date.now();
+      if(diff<=0){
+        ['d','h','m','s'].forEach(id=>document.getElementById(id).textContent='00');
+        return;
+      }
+      const d = Math.floor(diff/86400000);
+      const h = Math.floor(diff%86400000/3600000);
+      const m = Math.floor(diff%3600000/60000);
+      const s = Math.floor(diff%60000/1000);
+      document.getElementById('d').textContent=pad(d);
+      document.getElementById('h').textContent=pad(h);
+      document.getElementById('m').textContent=pad(m);
+      document.getElementById('s').textContent=pad(s);
+    }
+    tick();setInterval(tick,1000);
+  })();
+</script>
+
+<!-- ===== TRACKING & ATTRIBUTION ===== -->
+<script>
+(function(){
+  var STORAGE_KEY = 'na_attrib';
+  var SESSION_KEY = 'na_session';
+  var TRK_KEY      = 'krob_trk';
+  var SYMPLA_HOST  = 'sympla.com.br';
+
+  function uuid(){
+    if (window.crypto && crypto.randomUUID) return crypto.randomUUID();
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c){
+      var r = Math.random()*16|0, v = c==='x' ? r : (r&0x3|0x8);
+      return v.toString(16);
+    });
+  }
+
+  function getOrCreateSessionId(){
+    try {
+      var sid = localStorage.getItem(SESSION_KEY);
+      if (!sid){ sid = uuid(); localStorage.setItem(SESSION_KEY, sid); }
+      return sid;
+    } catch(e){ return uuid(); }
+  }
+
+  function captureAttribution(){
+    var params = new URLSearchParams(window.location.search);
+    var fields = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','gclid','ttclid'];
+    var current = {};
+    fields.forEach(function(k){ if (params.get(k)) current[k] = params.get(k); });
+    if (Object.keys(current).length){
+      current.captured_at = new Date().toISOString();
+      current.landing_url = window.location.href;
+      current.referrer = document.referrer || null;
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(current)); } catch(e){}
+    }
+    var stored = {};
+    try { stored = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch(e){}
+    return stored;
+  }
+
+  // trk: identificador da intenção de checkout, persistido na aba (reutilizado em refresh).
+  // É a linha que liga a compra (webhook Sympla via ?ref=) de volta à visita original.
+  function getOrCreateTrk(){
+    try {
+      var t = sessionStorage.getItem(TRK_KEY);
+      if (!t){ t = uuid(); sessionStorage.setItem(TRK_KEY, t); }
+      return t;
+    } catch(e){ return uuid(); }
+  }
+
+  // Grava trk + UTMs no stack (D1) no load, para o webhook Sympla enriquecer a compra depois.
+  function postCheckoutSession(attrib, trk){
+    try {
+      fetch('/checkout-session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        keepalive: true,
+        body: JSON.stringify({
+          trk: trk,
+          utm_source: attrib.utm_source || '',
+          utm_medium: attrib.utm_medium || '',
+          utm_campaign: attrib.utm_campaign || '',
+          utm_content: attrib.utm_content || '',
+          utm_term: attrib.utm_term || '',
+          event_source_url: location.href
+        })
+      }).catch(function(){});
+    } catch(e){}
+  }
+
+  function enrichSymplaLinks(attrib, sessionId, trk){
+    var links = document.querySelectorAll('a[href*="' + SYMPLA_HOST + '"]');
+    links.forEach(function(a){
+      try {
+        var url = new URL(a.href);
+        ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
+          if (attrib[k] && !url.searchParams.has(k)) url.searchParams.set(k, attrib[k]);
+        });
+        if (!url.searchParams.has('utm_source')) url.searchParams.set('utm_source', 'site');
+        if (!url.searchParams.has('utm_medium')) url.searchParams.set('utm_medium', 'landing');
+        if (!url.searchParams.has('utm_campaign')) url.searchParams.set('utm_campaign', 'neuroarquitetura-empresarial');
+        url.searchParams.set('na_sid', sessionId);
+        // ref = trk: o adapter Sympla do stack lê body.data.ref para achar o checkout_session.
+        url.searchParams.set('ref', trk);
+        a.href = url.toString();
+      } catch(e){}
+    });
+  }
+
+  function bindCheckoutEvents(sessionId){
+    var links = document.querySelectorAll('a[href*="' + SYMPLA_HOST + '"]');
+    links.forEach(function(a){
+      a.addEventListener('click', function(){
+        var eventId = uuid();
+        try { sessionStorage.setItem('na_last_ic_event', eventId); } catch(e){}
+        // Server-side InitiateCheckout via CAPI (mesmo event_id do pixel = dedup).
+        // sendBeacon sobrevive à navegação para o Sympla.
+        try {
+          var icPayload = JSON.stringify({
+            event_name: 'InitiateCheckout',
+            event_id: eventId,
+            event_time: Math.floor(Date.now()/1000),
+            event_source_url: location.href,
+            user_data: {}
+          });
+          navigator.sendBeacon('/tracker', new Blob([icPayload], { type: 'application/json' }));
+        } catch(e){}
+        if (typeof fbq === 'function'){
+          fbq('track', 'InitiateCheckout', {
+            content_name: 'Neuroarquitetura Empresarial — Imersão em Liderança',
+            content_category: 'evento-presencial',
+            content_ids: ['neuroarquitetura-empresarial-maua-2026-08-22'],
+            value: 500.00,
+            currency: 'BRL'
+          }, { eventID: eventId });
+        }
+      }, { passive: true });
+    });
+  }
+
+  function init(){
+    var attrib = captureAttribution();
+    var sessionId = getOrCreateSessionId();
+    var trk = getOrCreateTrk();
+    postCheckoutSession(attrib, trk);
+    enrichSymplaLinks(attrib, sessionId, trk);
+    bindCheckoutEvents(sessionId);
+  }
+
+  if (document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+
+</body>
+</html>

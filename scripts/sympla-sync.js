@@ -17,7 +17,12 @@
 //   META_TEST_EVENT_CODE  (optional — só pra testes em Events Manager)
 //
 // Hardcoded:
-//   SYMPLA_EVENT_ID = 3372889 (Heranças Invisíveis)
+//   SYMPLA_EVENT_ID = 3504059 (Neuroarquitetura Empresarial)
+//
+// ⚠️ FALLBACK ONLY: a fonte primária de Purchase é o webhook Sympla do
+// tracking stack (/webhook/sympla/<slug>). Este polling fica DESLIGADO no
+// agendamento (ver .github/workflows/sympla-sync.yml) para não duplicar a
+// contagem no Meta. Rode manual só se o webhook estiver indisponível.
 // -----------------------------------------------------------------------------
 
 // dotenv carrega .env localmente; em GitHub Actions vem via secrets
@@ -26,7 +31,7 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 
-const SYMPLA_EVENT_ID = 3372889;
+const SYMPLA_EVENT_ID = 3504059;
 const SYMPLA_API_TOKEN = process.env.SYMPLA_API_TOKEN;
 const META_PIXEL_ID = process.env.META_PIXEL_ID;
 const META_ACCESS_TOKEN = process.env.META_ACCESS_TOKEN;
@@ -105,7 +110,7 @@ async function sendPurchaseToMeta(order) {
     currency: 'BRL',
     content_type: 'product',
     content_ids: [String(SYMPLA_EVENT_ID)],
-    content_name: 'Heranças Invisíveis',
+    content_name: 'Neuroarquitetura Empresarial',
     num_items: 1,
   };
 
@@ -114,7 +119,7 @@ async function sendPurchaseToMeta(order) {
       event_name: 'Purchase',
       event_time: eventTime,
       event_id: 'sympla-' + order.id, // dedup key
-      event_source_url: 'https://www.sympla.com.br/evento/herancas-invisiveis-os-padroes-familiares-que-controlam-sua-vida/' + SYMPLA_EVENT_ID,
+      event_source_url: 'https://www.sympla.com.br/evento/diagnostico-de-estrutura-mental-do-empresario-e-lider-de-alta-performance/' + SYMPLA_EVENT_ID,
       action_source: 'website',
       user_data: userData,
       custom_data: customData,
