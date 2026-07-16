@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Estático 03 — Urgência / Escassez (1080x1080)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#111;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:20px;font-family:'Inter',sans-serif}
+  .ad{
+    width:1080px;height:1080px;
+    position:relative;overflow:hidden;
+    background:#0a0a08;
+    color:#f5f0e8;
+  }
+
+  /* Fundo — padrão geométrico premium */
+  .bg-geo{
+    position:absolute;inset:0;
+    background:
+      radial-gradient(ellipse 120% 80% at 30% 60%,rgba(201,160,67,0.07) 0%,transparent 60%),
+      radial-gradient(ellipse 80% 80% at 80% 20%,rgba(201,160,67,0.05) 0%,transparent 50%),
+      #0a0a08;
+  }
+  .bg-lines{
+    position:absolute;inset:0;
+    background-image:repeating-linear-gradient(
+      -55deg,
+      transparent,
+      transparent 80px,
+      rgba(201,160,67,0.025) 80px,
+      rgba(201,160,67,0.025) 81px
+    );
+    pointer-events:none;
+  }
+
+  /* Barras douradas */
+  .bar-top{
+    position:absolute;top:0;left:0;right:0;height:3px;
+    background:linear-gradient(90deg,#c9a043,#e8c96a 50%,#c9a043);
+    z-index:5;
+  }
+
+  /* Cantos decorativos */
+  .corner{position:absolute;width:28px;height:28px;z-index:3;pointer-events:none}
+  .corner.tl{top:38px;left:38px;border-top:2px solid rgba(201,160,67,0.4);border-left:2px solid rgba(201,160,67,0.4)}
+  .corner.tr{top:38px;right:38px;border-top:2px solid rgba(201,160,67,0.4);border-right:2px solid rgba(201,160,67,0.4)}
+  .corner.bl{bottom:38px;left:38px;border-bottom:2px solid rgba(201,160,67,0.4);border-left:2px solid rgba(201,160,67,0.4)}
+  .corner.br{bottom:38px;right:38px;border-bottom:2px solid rgba(201,160,67,0.4);border-right:2px solid rgba(201,160,67,0.4)}
+
+  /* Foto Adriano — canto inferior direito */
+  .photo-corner{
+    position:absolute;
+    bottom:62px;right:62px;
+    width:200px;height:260px;
+    overflow:hidden;
+    border-radius:4px;
+    border:1px solid rgba(201,160,67,0.35);
+    z-index:4;
+  }
+  .photo-corner::after{
+    content:"";position:absolute;inset:0;z-index:1;
+    background:linear-gradient(180deg,transparent 50%,rgba(10,10,8,0.55) 100%);
+  }
+  .photo-img{
+    width:100%;height:100%;
+    background-image:url('adreano.jpg');
+    background-size:cover;
+    background-position:center top;
+    filter:saturate(0.7) contrast(1.1);
+  }
+
+  /* Conteúdo principal */
+  .content{
+    position:absolute;
+    top:0;left:0;right:0;bottom:0;
+    z-index:5;
+    padding:72px 72px 72px 72px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+
+  /* Topo — badge idêntico à imagem 1 */
+  .top{display:flex;align-items:center;justify-content:space-between}
+  .badge{
+    display:inline-flex;align-items:center;gap:10px;
+    background:rgba(201,160,67,0.15);
+    border:1px solid rgba(201,160,67,0.45);
+    border-radius:6px;
+    padding:10px 18px;
+    width:fit-content;
+  }
+  .badge-dot{width:8px;height:8px;background:#c9a043;border-radius:50%;flex-shrink:0}
+  .badge-text{
+    font-size:13px;letter-spacing:.22em;text-transform:uppercase;
+    font-weight:700;color:#c9a043;
+  }
+
+  /* Indicador ÚLTIMAS VAGAS — compacto, ao lado do badge */
+  .urgency-tag{
+    display:inline-flex;align-items:center;gap:10px;
+    font-size:13px;letter-spacing:.22em;text-transform:uppercase;
+    font-weight:700;color:#d4312a;
+  }
+  .urgency-dot{width:8px;height:8px;background:#d4312a;border-radius:50%;flex-shrink:0;box-shadow:0 0 0 3px rgba(212,49,42,0.2)}
+
+  /* Meio — frase-gancho é o título principal */
+  .middle{
+    flex:1;
+    display:flex;flex-direction:column;justify-content:center;
+    padding:20px 0;
+    max-width:720px;
+  }
+  .overline{
+    font-size:13px;letter-spacing:.3em;text-transform:uppercase;
+    color:#5a7a6e;font-weight:600;margin-bottom:22px;
+  }
+  /* FRASE-GANCHO — protagonista da peça */
+  .headline{
+    font-family:'Inter',sans-serif;
+    font-size:68px;line-height:1.0;font-weight:900;
+    color:#f5f0e8;letter-spacing:-0.03em;
+    margin-bottom:32px;
+  }
+  .headline em{
+    font-style:normal;
+    color:#c9a043;
+    display:block;
+  }
+
+  /* Dados do evento — linha de apoio, abaixo da frase */
+  .event-stats{
+    display:flex;align-items:center;gap:0;
+    border-left:3px solid #c9a043;
+    padding-left:18px;
+  }
+  .stat{display:flex;flex-direction:column;gap:3px;padding-right:32px}
+  .stat-num{font-size:38px;font-weight:900;color:#c9a043;letter-spacing:-0.03em;line-height:1}
+  .stat-label{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#6a7a6e;font-weight:600}
+  .stat-sep{width:1px;height:48px;background:rgba(201,160,67,0.25);margin-right:32px;align-self:center}
+
+  /* Rodapé */
+  .footer-content{display:flex;flex-direction:column;gap:12px}
+  .divider{height:1px;background:linear-gradient(90deg,rgba(201,160,67,0.5),transparent)}
+  .date-price{
+    font-size:15px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+    color:#c9a043;
+  }
+  .vagas-info{
+    font-size:13px;letter-spacing:.12em;text-transform:uppercase;
+    color:#5a6a5e;font-weight:500;
+  }
+  .vagas-info strong{color:#e0d5c1;font-weight:700}
+  .name-line{font-size:13px;color:#3d4d3a;letter-spacing:.05em;font-weight:500}
+</style>
+</head>
+<body>
+<div class="ad">
+  <div class="bg-geo"></div>
+  <div class="bg-lines"></div>
+  <div class="bar-top"></div>
+  <div class="corner tl"></div>
+  <div class="corner tr"></div>
+  <div class="corner bl"></div>
+  <div class="corner br"></div>
+
+  <!-- Foto no canto -->
+  <div class="photo-corner">
+    <div class="photo-img"></div>
+  </div>
+
+  <div class="content">
+    <!-- Topo: badge do evento + indicador de urgência -->
+    <div class="top">
+      <div class="badge">
+        <div class="badge-dot"></div>
+        <div class="badge-text">Imersão de Liderança</div>
+      </div>
+      <div class="urgency-tag">
+        <div class="urgency-dot"></div>
+        Últimas vagas
+      </div>
+    </div>
+
+    <!-- Meio: frase-gancho é o protagonista -->
+    <div class="middle">
+      <div class="overline">Por que você continua contratando errado</div>
+      <div class="headline">
+        Aprenda a contratar<br/>
+        líderes —<br/>
+        <em>não marionetes.</em>
+      </div>
+
+      <!-- Números de apoio, abaixo da frase -->
+      <div class="event-stats">
+        <div class="stat">
+          <div class="stat-num">20</div>
+          <div class="stat-label">Empresários</div>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+          <div class="stat-num">2</div>
+          <div class="stat-label">Dias de imersão</div>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+          <div class="stat-num">1</div>
+          <div class="stat-label">Virada real</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rodapé -->
+    <div class="footer-content">
+      <div class="divider"></div>
+      <div class="date-price">22 e 23 de Agosto · R$ 500</div>
+      <div class="vagas-info"><strong>Garanta a sua vaga</strong> · Evento presencial</div>
+      <div class="name-line">Adreano Vitor de Lima</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

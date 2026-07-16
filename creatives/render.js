@@ -21,6 +21,10 @@ const TEMPLATES = [
   // Stories
   { html: 'story-01-photo.html',    out: 'story-01-photo.png',    w: 1080, h: 1920 },
   { html: 'story-02-question.html', out: 'story-02-question.png', w: 1080, h: 1920 },
+  // Imersão de Liderança — Estáticos de conversão
+  { html: 'static-01-confronto.html', out: 'static-01-confronto.png', w: 1080, h: 1080 },
+  { html: 'static-02-autoridade.html',out: 'static-02-autoridade.png',w: 1080, h: 1080 },
+  { html: 'static-03-urgencia.html',  out: 'static-03-urgencia.png',  w: 1080, h: 1080 },
 ];
 
 (async () => {
