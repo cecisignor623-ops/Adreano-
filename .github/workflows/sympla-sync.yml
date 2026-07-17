@@ -1,15 +1,18 @@
 name: Sympla → Meta CAPI Sync
 
-# ⚠️ AGENDAMENTO DESLIGADO. A fonte primária de Purchase agora é o webhook
-# Sympla do tracking stack (/webhook/sympla/<slug>). Deixar o polling rodando
-# a cada 15 min duplicaria a contagem de compras no Meta (event_id diferente).
-# Mantido apenas o disparo MANUAL (workflow_dispatch) como fallback, caso o
-# webhook fique indisponível. Para reativar o polling, descomente o bloco
-# schedule abaixo E desative o webhook no painel do Sympla — nunca os dois juntos.
+# Fonte PRIMÁRIA de Purchase. O Sympla não oferece webhook (push) — só API de
+# consulta (pull) — então este polling é o caminho oficial: a cada 15 min busca
+# pedidos pagos do evento 3504059 e dispara Purchase ao Meta CAPI (dedup por
+# event_id = sympla-<order_id>). Também roda em push no script e sob demanda.
 on:
-  # schedule:
-  #   - cron: '*/15 * * * *'
-  workflow_dispatch: # botão "Run workflow" manual (fallback)
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch: # botão "Run workflow" manual
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/sympla-sync.js'
+      - '.github/workflows/sympla-sync.yml'
 
 jobs:
   sync:

@@ -19,10 +19,9 @@
 // Hardcoded:
 //   SYMPLA_EVENT_ID = 3504059 (Neuroarquitetura Empresarial)
 //
-// ⚠️ FALLBACK ONLY: a fonte primária de Purchase é o webhook Sympla do
-// tracking stack (/webhook/sympla/<slug>). Este polling fica DESLIGADO no
-// agendamento (ver .github/workflows/sympla-sync.yml) para não duplicar a
-// contagem no Meta. Rode manual só se o webhook estiver indisponível.
+// Fonte PRIMÁRIA de Purchase: o Sympla não tem webhook (push), só API de
+// consulta (pull). Este script poll-a os pedidos pagos e dispara Purchase ao
+// Meta CAPI. Roda a cada 15 min via GitHub Actions (.github/workflows/sympla-sync.yml).
 // -----------------------------------------------------------------------------
 
 // dotenv carrega .env localmente; em GitHub Actions vem via secrets
