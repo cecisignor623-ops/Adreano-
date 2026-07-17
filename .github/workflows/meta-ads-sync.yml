@@ -1,0 +1,27 @@
+name: Meta Ads Spend Sync
+
+# Puxa gasto/impressões/cliques do Meta Marketing API para o D1 (tabela ad_spend),
+# para o /dash mostrar spend, CPA e ROAS. Bate no endpoint /api/sync/meta-ads do
+# tracking stack, autenticado pelo header x-sync-secret (secret SYNC_SECRET).
+# Roda de hora em hora e também sob demanda (Run workflow).
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Trigger ad-spend sync
+        run: |
+          code=$(curl -s -o /tmp/resp.txt -w "%{http_code}" -X POST \
+            -H "x-sync-secret: ${{ secrets.SYNC_SECRET }}" \
+            https://www.adreanovitor.com/api/sync/meta-ads)
+          echo "HTTP $code"
+          echo "Resposta:"
+          cat /tmp/resp.txt
+          echo ""
+          # Falha (run vermelho) se não for 200 — sinal claro de erro de auth/rede.
+          test "$code" = "200"
